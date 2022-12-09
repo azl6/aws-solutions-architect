@@ -9,6 +9,7 @@ Práticas para dominar:
 - Estrutura das IAM policies
 - Password Policies
 - Implementação do MFA
+- Uso do Access Key ID e Secret Access Key
 
 ## Criando usuários
 

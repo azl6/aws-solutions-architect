@@ -33,9 +33,22 @@ Seremos redirecionados para a página de login do IAM, bastando informar o resta
 
 ![image](https://user-images.githubusercontent.com/80921933/206606002-f1a739ca-e0d2-4cfb-862f-a88f0d4fec9d.png)
 
+
 ### Estrutura de uma IAM policy
 
 ![image](https://user-images.githubusercontent.com/80921933/206606247-a3bc864f-bb64-4e18-8e5f-fcf43b628533.png)
+
+
+## Password Policy
+
+Podemos configurar uma **password policy** clicando no seguinte botão:
+
+![image](https://user-images.githubusercontent.com/80921933/206609954-b7cfd290-92d0-4a71-9024-d15a86917e05.png)
+
+Lá, podemos customizar a estrutura das senhas dos **IAM users** criados naquela conta
+
+![image](https://user-images.githubusercontent.com/80921933/206610296-59ffa04a-4bed-4654-8af4-ac318c5ce5ca.png)
+
 
 ## Multi-factor authentication (MFA)
 

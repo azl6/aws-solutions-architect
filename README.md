@@ -10,6 +10,8 @@ Práticas para dominar:
 - Password Policies
 - Implementação do MFA
 - Uso do Access Key ID e Secret Access Key
+- Utilização das IAM Roles
+- Credentials Report e Access Advisor
 
 ## Criando usuários
 
@@ -58,6 +60,30 @@ Lá, podemos customizar a estrutura das senhas dos **IAM users** criados naquela
 ![image](https://user-images.githubusercontent.com/80921933/206609291-4649ee2a-89ef-4a8a-93bb-06833cfe0efd.png)
 
 ![image](https://user-images.githubusercontent.com/80921933/206609357-a3bd50d7-6557-4a6b-90a7-7ff65da420df.png)
+
+## IAM Roles
+
+**TODO:** PENDENTE DE INSERÇÃO!
+
+
+## Credentials Report
+
+Podemos baixar o **Credentials Report** de uma conta, que consiste em um .xlsx informando todas as informações referentes a **segurança** dos usuários naquela conta.
+
+É acessível por: **IAM > Menu principal > Credentials Report**
+
+![image](https://user-images.githubusercontent.com/80921933/206616990-f5a0cd2d-cbc5-44a2-ae47-f6b611e7306c.png)
+
+
+## Access Advisor
+
+Tela que fornece informações sobre os últimos serviços acessados por um usuário. Utilizada para reforçar o **principle of the least priviledge**
+
+É acessível por: **IAM > Menu principal > Users > Access Advisor**
+
+![image](https://user-images.githubusercontent.com/80921933/206617368-fc7715e3-c920-4b33-9230-7cd2a255351c.png)
+
+
 
 
 

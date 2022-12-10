@@ -71,7 +71,36 @@ Lá, podemos customizar a estrutura das senhas dos **IAM users** criados naquela
 
 ## IAM Roles
 
-**TODO:** PENDENTE DE INSERÇÃO!
+Ao tentarmos rodar o comando
+
+```
+aws iam list-users
+```
+
+Teremos o seguinte erro
+
+![image](https://user-images.githubusercontent.com/80921933/206866847-0074488b-c612-4211-bb94-fbc4223f3778.png)
+
+Isso acontece porque o EC2 não possui permissões para executar tal ação. Para corrigir isso, temos duas opções:
+
+1. Rodar **aws configure** no EC2 e informar o **Access Key ID** e **Secret Access Key** de uma conta com tais permissões
+2. Atribuir uma role à instância com a policy **IAMReadOnlyAccess**
+
+A **opção 1** não é boa porque, caso outras pessoas acessem a mesma EC2, poderão ver as suas credenciais (Access Key ID e Secret Access Key)
+
+Sendo assim, seguimos com a opção 2:
+
+![image](https://user-images.githubusercontent.com/80921933/206867084-11427019-c9d3-4b69-a33f-34cd8c5c79c7.png)
+
+Criando uma role com a policy **IAMReadOnlyAccess**:
+
+![image](https://user-images.githubusercontent.com/80921933/206867226-b2a911aa-4718-45f5-a382-2e52d66c2798.png)
+
+Attachando a role na instância EC2 pelo primeiro menu aberto:
+
+![image](https://user-images.githubusercontent.com/80921933/206867272-10a47c1e-e830-4365-863a-307c1f2473a8.png)
+
+Agora, o comando será bem sucedido.
 
 
 ## Credentials Report

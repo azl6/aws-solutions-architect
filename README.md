@@ -85,6 +85,10 @@ Tela que fornece informações sobre os últimos serviços acessados por um usu�
 
 # Billing
 
+Práticas para dominar:
+
+
+
 ## Permissão na página de billing para IAM users
 
 Ao acessar a página de Billing através de um IAM user (mesmo que ele esteja com a policy **AdministratorAccess**), seremos informados de que ele não tem permissão para tal ação
@@ -104,6 +108,12 @@ Em **Billing > Budgets > Create Budget**, podemos configurar um budget para que 
 ![image](https://user-images.githubusercontent.com/80921933/206862451-01a86fbf-b95e-4d42-9824-613fde667a43.png)
 
 Basta seguir o template pré-definido, configurar um valor máximo e um e-mail para ser notificado.
+
+# EC2
+
+## EC2 naming convention
+
+![image](https://user-images.githubusercontent.com/80921933/206863662-f370c08c-a08b-45a1-9d56-6f6b403341d1.png)
 
 
 

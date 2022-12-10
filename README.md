@@ -83,6 +83,30 @@ Tela que fornece informações sobre os últimos serviços acessados por um usu�
 
 ![image](https://user-images.githubusercontent.com/80921933/206617368-fc7715e3-c920-4b33-9230-7cd2a255351c.png)
 
+# Billing
+
+## Permissão na página de billing para IAM users
+
+Ao acessar a página de Billing através de um IAM user (mesmo que ele esteja com a policy **AdministratorAccess**), seremos informados de que ele não tem permissão para tal ação
+
+![image](https://user-images.githubusercontent.com/80921933/206861706-0c0d6e15-d5aa-4d3b-b239-4758317b4296.png)
+
+Basta ativarmos a opção **Activate IAM Access**, no menu **Account** do usuário **ROOT**
+
+![image](https://user-images.githubusercontent.com/80921933/206862125-cd90698e-5ae1-4237-8b85-aacc43882eaf.png)
+
+Agora, retornamos ao IAM user e teremos acesso normalmente à página de **Billing**.
+
+## Criação de budgets
+
+Em **Billing > Budgets > Create Budget**, podemos configurar um budget para que sejamos notificados quando um custo X seja atingido.
+
+![image](https://user-images.githubusercontent.com/80921933/206862451-01a86fbf-b95e-4d42-9824-613fde667a43.png)
+
+Basta seguir o template pré-definido, configurar um valor máximo e um e-mail para ser notificado.
+
+
+
 
 
 

@@ -168,6 +168,25 @@ After that, when launching an instance, we just need to select the created place
 
 ![image](https://user-images.githubusercontent.com/80921933/206882477-5d1943ee-76e5-4ed0-a167-36a1cc3a9852.png)
 
+## Elastic network interfaces for EC2
+
+We can display an instance's ENI on **EC2 > Instances > \<INSTANCE> > Networking**
+
+![image](https://user-images.githubusercontent.com/80921933/206884742-ec16199a-2981-497c-8dd2-aa9f8080050d.png)
+
+To create a new ENI, go to **Network & Security > Network Interfaces > Create Network Interface**
+
+The newly create ENI will be available to attachment:
+
+![image](https://user-images.githubusercontent.com/80921933/206884813-0f49de77-fb90-4a8b-b844-5f03feae0f62.png)
+
+We can attach it to an EC2 instance through the **Attach** option, after clicking on it
+
+![image](https://user-images.githubusercontent.com/80921933/206884842-fe3d5cf2-73fc-4342-974e-e4abb9423e6d.png)
+
+We just need to choose an instance and it's done!
+
+
 
 
 

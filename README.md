@@ -152,6 +152,23 @@ Basta seguir o template pré-definido, configurar um valor máximo e um e-mail p
 
 ![image](https://user-images.githubusercontent.com/80921933/206863662-f370c08c-a08b-45a1-9d56-6f6b403341d1.png)
 
+## Creating Placement groups
+
+**Placement groups** define how your lanched EC2 instances are going to be spread.
+
+To create a **placement group**, we can go to **EC2 > Network & Security section > Placement Groups**.
+
+![image](https://user-images.githubusercontent.com/80921933/206882417-eafdb014-b41b-4e6f-a162-8999e69290b2.png)
+
+After clicking on **Create placement group**, we can setup our **placement strategy**
+
+![image](https://user-images.githubusercontent.com/80921933/206882456-32eaecf4-2f26-408a-872a-02b6bc74ca98.png)
+
+After that, when launching an instance, we just need to select the created placement group
+
+![image](https://user-images.githubusercontent.com/80921933/206882477-5d1943ee-76e5-4ed0-a167-36a1cc3a9852.png)
+
+
 
 
 

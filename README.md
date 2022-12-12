@@ -190,7 +190,7 @@ We just need to choose an instance and it's done!
 
 ## Criando um EBS Volume (com ou sem delete on termination) e realizando um multi-attach
 
-Ao criar uma instância EC2, podemos acessar opções mais avançadas na aba de **Storage**. Lá, definimos se queremos a flag **delete on termination** ON ou OFF. Neste exemplo, deixarei **ON**.
+Ao criar uma instância EC2, podemos acessar opções mais avançadas na aba de **Storage**. Lá, definimos se queremos a flag **delete on termination** ON ou OFF para os EBS volumes. Neste exemplo, deixarei **ON**.
 
 ![image](https://user-images.githubusercontent.com/80921933/207129649-fc1588b3-94ca-4675-8f69-26b808496530.png)
 

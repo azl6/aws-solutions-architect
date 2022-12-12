@@ -262,11 +262,11 @@ Na aba de **Retention Settings**, definimos um prazo máximo de retenção do sn
 
 ![image](https://user-images.githubusercontent.com/80921933/207144171-41467858-6acf-440d-9441-ef33b3bbbeb1.png)
 
-Com a **retention rule**, podemos consultar a aba de **Resources**, que, atualmente, não terá nenhum snapshot, já que não deletamos nenhum.
+Com a **retention rule** criada, podemos consultar a aba de **Resources**, que, atualmente, não terá nenhum snapshot, já que não deletamos nenhum.
 
 ![image](https://user-images.githubusercontent.com/80921933/207144354-675d78ef-2574-4eb7-9799-8c1acfa417eb.png)
 
-Após deletarmos o snapshot, veremos que ele foi para a Recycle bin:
+Após deletarmos o snapshot, veremos que ele foi para a Recycle bin. Podemos selecioná-lo e recuperá-lo, caso a data esteja dentro dos limites.
 
 ![image](https://user-images.githubusercontent.com/80921933/207145081-c93f428c-1538-42ea-9814-151805f70a33.png)
 

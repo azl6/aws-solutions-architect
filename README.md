@@ -272,7 +272,35 @@ Após deletarmos o snapshot, veremos que ele foi para a Recycle bin. Podemos sel
 
 ## Criando uma AMI
 
-Continuar daqui...
+Podemos lançar uma instância EC2 e inserir um script via user data para instalar o Docker
+
+![image](https://user-images.githubusercontent.com/80921933/207161171-69dfee5a-7d62-4456-9c45-bd19b5a5acbf.png)
+
+Depois da instância estar up, podemos rodar **sudo docker ps** e certificar que o Docker fora instalado:
+
+![image](https://user-images.githubusercontent.com/80921933/207161837-cbf6c900-3007-468f-8355-58d6ec66c83c.png)
+
+Com o Docker instalado, podemos criar uma AMI para que não precisemos instalar o Docker toda vez que uma nova instância EC2 for criada. Para tal, selecionamos a opção **Create image**
+
+![image](https://user-images.githubusercontent.com/80921933/207162119-3ca56225-99ee-4178-859b-ebf1bab1c48c.png)
+
+Após configurarmos a AMI, podemos ver ela criada no menu de AMI.
+
+![image](https://user-images.githubusercontent.com/80921933/207163344-c2424cef-db85-4966-a55a-be2c426ae693.png)
+
+## Criando uma EC2 com uma AMI personalizada
+
+Do menu de AMI, podemos selecionar a AMI e clicar em **Launch instance from AMI** (print acima).
+
+Alternativamente, podemos selecionar a AMI no menu de criação de EC2, em **My AMI's**
+
+![image](https://user-images.githubusercontent.com/80921933/207163898-a3b6e17f-ef8e-4c21-8a6b-90b89f060916.png)
+
+Depois, basta seguir o procedimento padrão de criação de EC2.
+
+
+
+
 
 
 

@@ -226,7 +226,7 @@ Depois do terminate:
 
 O volume root foi deletado, pois tinha a flag **delete on termination** **ON**. O outro volume criado permaneceu vivo, pois não tinha essa flag. Ele pode ser re-attachado a outras instâncias.
 
-# Criando um snapshot a partir de um volume
+## Criando um snapshot a partir de um volume
 
 No menu de um EBS volume, selecionamos **Actions > Create snapshot**
 
@@ -236,17 +236,39 @@ No menu de **Snapshots**, veremos o snapshot criado
 
 ![image](https://user-images.githubusercontent.com/80921933/207141456-554ae6bb-1ca2-4f2a-8741-93e3f8ab319e.png)
 
-# Criando um EBS volume a partir de um snapshot
+## Criando um EBS volume a partir de um snapshot
 
 A partir de um snapshot, podemos re-criar um volume, por exemplo, e lançá-lo em outra AZ, através da opção **Create volume from snapshot**.
 
 ![image](https://user-images.githubusercontent.com/80921933/207141661-2620aef3-3764-4b4e-9740-ad012d80c7e0.png)
 
-# Copiando um snapshot para outra AZ
+## Copiando um snapshot para outra AZ
 
 Também é possível copiar o snapshot para uma AZ diferente com a opção **Copy snapshot** (encontrada no mesmo menu anterior), a fim de fomentar estratégias de disaster-recovery
 
 ![image](https://user-images.githubusercontent.com/80921933/207142070-a6e397e7-ec61-49eb-951d-112a0e9ccac0.png)
+
+## Utilização do Recycle bin para previnir deleções acidentais de snapshots
+
+Dentro do menu de snapshots, podemos clicar na opção **Recycle bin**
+
+![snapshots](https://user-images.githubusercontent.com/80921933/207143698-2dfb592c-9f0d-4b84-9b9d-2ba600f82ea8.png)
+
+Lá, podemos criar **retention rules**, que definem um tempo X para que um snapshot permaneça armazenado em uma "lixeira" após a sua deleção, podendo ser recuperado caso a data da requisição ainda esteja dentro dos limites do **retention rule**.
+
+![image](https://user-images.githubusercontent.com/80921933/207143957-b5864525-23da-4f9d-86a3-b5e18258bf1b.png)
+
+Na aba de **Retention Settings**, definimos um prazo máximo de retenção do snapshot deletado
+
+![image](https://user-images.githubusercontent.com/80921933/207144171-41467858-6acf-440d-9441-ef33b3bbbeb1.png)
+
+Com a **retention rule**, podemos consultar a aba de **Resources**, que, atualmente, não terá nenhum snapshot, já que não deletamos nenhum.
+
+![image](https://user-images.githubusercontent.com/80921933/207144354-675d78ef-2574-4eb7-9799-8c1acfa417eb.png)
+
+Após deletarmos o snapshot, veremos que ele foi para a Recycle bin:
+
+![image](https://user-images.githubusercontent.com/80921933/207145081-c93f428c-1538-42ea-9814-151805f70a33.png)
 
 
 

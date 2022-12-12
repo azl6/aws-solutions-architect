@@ -270,6 +270,10 @@ Após deletarmos o snapshot, veremos que ele foi para a Recycle bin. Podemos sel
 
 ![image](https://user-images.githubusercontent.com/80921933/207145081-c93f428c-1538-42ea-9814-151805f70a33.png)
 
+## Criando uma AMI
+
+Continuar daqui...
+
 
 
 

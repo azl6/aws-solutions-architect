@@ -186,6 +186,48 @@ We can attach it to an EC2 instance through the **Attach** option, after clickin
 
 We just need to choose an instance and it's done!
 
+# Elastic Block Store (EBS)
+
+## Criando um EBS Volume (com ou sem delete on termination) e realizando um multi-attach
+
+Ao criar uma instância EC2, podemos acessar opções mais avançadas na aba de **Storage**. Lá, definimos se queremos a flag **delete on termination** ON ou OFF. Neste exemplo, deixarei **ON**.
+
+![image](https://user-images.githubusercontent.com/80921933/207129649-fc1588b3-94ca-4675-8f69-26b808496530.png)
+
+Depois de termos a instância criada, podemos verificar que de fato há um volume attachado a ela, na aba de **Storage**
+
+![image](https://user-images.githubusercontent.com/80921933/207129906-a8a44831-8948-4b28-a120-f446c7a12460.png)
+
+Como o EBS suporta multi-attach, podemos criar um outro EBS volume em **Elastic Block Store > Volumes > Create volume**
+
+![image](https://user-images.githubusercontent.com/80921933/207130272-80493f00-0ef2-4509-b75e-2ec3b2440778.png)
+
+Depois, basta preencher as informações. **IMPORTANTE:** O EBS Volume deve ser lançado **na mesma AZ** do EC2 ao qual se deseja attachá-lo. Nesta etapa também seria onde ativaríamos a encriptação de dados no volume para usufruir do EC2 Hibernate.
+
+![image](https://user-images.githubusercontent.com/80921933/207130689-f9028e40-6b7d-4cf2-8705-424821c5f86f.png)
+
+Depois, basta attachar o volume à instância EC2 no menu que será apresentado, após clicar neste botão:
+
+![image](https://user-images.githubusercontent.com/80921933/207130986-1ddba1ba-474d-4b2a-a85b-8e36408c6682.png)
+
+Agora, se verificarmos a aba de storage da EC2, verificaremos que o multi-attach foi bem sucedido.
+
+![image](https://user-images.githubusercontent.com/80921933/207131215-80207e26-6ddf-467f-b428-e00c745714f7.png)
+
+A fim de demonstrar o comportamento do **delete on termination**, podemos dar **Terminate** na EC2.
+
+Antes do terminate:
+
+![image](https://user-images.githubusercontent.com/80921933/207131527-2d22e385-d747-4015-a3cd-a020b54ae318.png)
+
+Depois do terminate:
+
+![image](https://user-images.githubusercontent.com/80921933/207131733-d4b344f4-e72c-428f-89a6-63df2c560a98.png)
+
+O volume root foi deletado, pois tinha a flag **delete on termination** **ON**. O outro volume criado permaneceu vivo, pois não tinha essa flag. Ele pode ser re-attachado a outras instâncias.
+
+
+
 
 
 

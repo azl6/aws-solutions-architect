@@ -226,6 +226,33 @@ Depois do terminate:
 
 O volume root foi deletado, pois tinha a flag **delete on termination** **ON**. O outro volume criado permaneceu vivo, pois não tinha essa flag. Ele pode ser re-attachado a outras instâncias.
 
+# Criando um snapshot a partir de um volume
+
+No menu de um EBS volume, selecionamos **Actions > Create snapshot**
+
+![image](https://user-images.githubusercontent.com/80921933/207141140-7c3846d1-f4bf-47f7-a72c-e7af02a3d6c3.png)
+
+No menu de **Snapshots**, veremos o snapshot criado
+
+![image](https://user-images.githubusercontent.com/80921933/207141456-554ae6bb-1ca2-4f2a-8741-93e3f8ab319e.png)
+
+# Criando um EBS volume a partir de um snapshot
+
+A partir de um snapshot, podemos re-criar um volume, por exemplo, e lançá-lo em outra AZ, através da opção **Create volume from snapshot**.
+
+![image](https://user-images.githubusercontent.com/80921933/207141661-2620aef3-3764-4b4e-9740-ad012d80c7e0.png)
+
+# Copiando um snapshot para outra AZ
+
+Também é possível copiar o snapshot para uma AZ diferente com a opção **Copy snapshot** (encontrada no mesmo menu anterior), a fim de fomentar estratégias de disaster-recovery
+
+![image](https://user-images.githubusercontent.com/80921933/207142070-a6e397e7-ec61-49eb-951d-112a0e9ccac0.png)
+
+
+
+
+
+
 
 
 

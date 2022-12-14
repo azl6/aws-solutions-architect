@@ -302,6 +302,60 @@ Depois, basta seguir o procedimento padrão de criação de EC2.
 
 ![image](https://user-images.githubusercontent.com/80921933/207668790-c5963cd4-a0b5-4196-a132-8a7c54e8d132.png)
 
+## Criando um EFS file system
+
+- Criar um EFS File System
+
+No menu do EFS, clicar em **Create file system**
+
+![image](https://user-images.githubusercontent.com/80921933/207680496-f549828b-d719-487b-aea8-7a5371a04651.png)
+
+Na tela subsequente, clicar em **Customize** para ter mais opções de configuração
+
+Na tela que aparecerá, poderemos configurar todas as opções descritas no arquivo **aws-saa-notes.odt**
+
+No **Step 2**, definimos as AZ's que terão acesso ao file system
+
+![image](https://user-images.githubusercontent.com/80921933/207681761-70f654e7-7a93-49bb-b9cd-6c1978461229.png)
+
+Poderemos confirmar a criação do file system no menu principal
+
+![image](https://user-images.githubusercontent.com/80921933/207682768-67c2cbc6-8ed4-4927-b846-cbd50a0e3f62.png)
+
+## Attachando um EFS file system a uma EC2
+
+No menu de criação de EC2, podemos selecionar a seguinte opção
+
+![Screenshot from 2022-12-14 15-40-09](https://user-images.githubusercontent.com/80921933/207683948-2ee2c41e-cac4-4953-8e24-feb46aa1be73.png)
+
+No menu aberto, selecionamos **Add shared file system**
+
+![image](https://user-images.githubusercontent.com/80921933/207684579-2c35fb1c-e563-43d7-94ea-2fe07c07ac55.png)
+
+No próximo menu, selecionamos o **file system** e o **mount point**, que será o diretório na EC2 para onde poderemos escrever/ler arquivos
+
+![image](https://user-images.githubusercontent.com/80921933/207684950-e62225ac-6161-47f6-85d8-0ca2b239d8d9.png)
+
+Depois, basta criar o EC2 normalmente.
+
+## Lendo arquivos de um EFS File System compartilhado entre duas EC2 em AZ's diferentes
+
+Escrevendo da instância 1:
+
+![image](https://user-images.githubusercontent.com/80921933/207686505-72750cc7-66c1-4ec0-ba6b-f0b0055ed8f9.png)
+
+Lendo na instância 2:
+
+![image](https://user-images.githubusercontent.com/80921933/207686696-98605289-348e-4cdb-9837-2388853fd30d.png)
+
+O EFS é montado por padrão em /mnt/efs/fs1.
+
+
+
+
+
+
+
 
 
 

@@ -298,6 +298,11 @@ Alternativamente, podemos selecionar a AMI no menu de criação de EC2, em **My 
 
 Depois, basta seguir o procedimento padrão de criação de EC2.
 
+## Criando um EBS volume encriptado a partir de um não-encriptado
+
+![image](https://user-images.githubusercontent.com/80921933/207668790-c5963cd4-a0b5-4196-a132-8a7c54e8d132.png)
+
+
 
 
 

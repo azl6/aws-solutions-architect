@@ -350,6 +350,12 @@ Lendo na instância 2:
 
 O EFS é montado por padrão em /mnt/efs/fs1.
 
+## Criando uma aplicação com 2 EC2 e um ALB
+
+- Criar 2 EC2
+- Criar um target-group com elas
+- Fazer um ALB apontar para esse target-group e distribuir a carga
+
 
 
 

@@ -350,9 +350,9 @@ Lendo na instância 2:
 
 O EFS é montado por padrão em /mnt/efs/fs1.
 
-## Criando uma aplicação com 2 EC2 e um ALB
+## Criando um target group para utilizar em um Load Balancer
 
-- Criar 2 EC2 com o seguinte user data:
+- As 2 EC2 terão o seguinte user data, que sobe um server http na porta 80 expondo o IP da instância.
 
   ```
   #!/bin/bash
@@ -363,11 +363,6 @@ O EFS é montado por padrão em /mnt/efs/fs1.
   systemctl enable httpd
   echo "<h1>Hello from $(hostname -f)</h1>" > /var/www/html/index.html
   ```
-
-- Criar um target-group com elas
-- Fazer um ALB apontar para esse target-group e distribuir a carga
-
-**Solução:**
 
 Considere as duas instâncias criadas:
 
@@ -393,11 +388,13 @@ Já na tela de **Register targets**, selecionamos as instâncias e clicamos em *
 
 Depois, clicamos em **Create target group**, e poderemos vê-lo criado no menu de **target groups**
 
-Para criar um **Applcation Load Balancer** para o target group, visitamos o menu de **Load Balancer** e selecionamos a opção **Create Load Balancer**
+## Criando um Application Load Balancer
+
+Para criar um **Applcation Load Balancer** para um target group, visitamos o menu de **Load Balancer** e selecionamos a opção **Create Load Balancer**
 
 ![image](https://user-images.githubusercontent.com/80921933/207767373-ac19a293-984d-4b17-b5cf-50a9e9e1adc6.png)
 
-Selecionamos a opção **Application Load Balancer**, e configuramos tudo. **Importante:** Deve-se criar um security group exclusivo para o ALB, que permite tráfego HTTP de 0.0.0.0/0
+Selecionamos a opção **Application Load Balancer**, e configuramos tudo. **Importante:** Deve-se criar um security group exclusivo para o ALB, que permite tráfego HTTP de 0.0.0.0/0. Além disso, é **sempre** uma boa prática permitir tráfego para as instâncias EC2 **somente** do security-group do Load Balancer. Isso significa que as instâncias serão acessíveis através do DNS do Load Balancer, mas não por seus próprios IPs públicos.
 
 Na aba de **Listeners and routing**, selecionamos o **target group** criado
 

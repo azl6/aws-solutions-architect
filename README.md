@@ -435,6 +435,20 @@ Testando a regra
 Seguir aula 76. 
 Passo a passo muito similar a criação do ALB. A única diferença é que o NLB não necessita de um security group.
 
+## Adicionando cookies (stickiness) ao Load Balancer
+
+Essa opção significa que um usuário, em seu primeiro acesso, fica "vinculado" à instância a qual o ALB o direciona pela primeira vez, por um período de tempo estabelecido.
+
+No menu dos **target groups**, selecionamos a opção **Edit atributes**
+
+![image](https://user-images.githubusercontent.com/80921933/207777078-f7e842ea-5d2f-47d3-af0e-650556fca97b.png)
+
+Na tela que se apresenta, basta configurar o stickiness
+
+![image](https://user-images.githubusercontent.com/80921933/207777249-3e60233b-f43f-4403-9100-a13605b88300.png)
+
+
+
 
 
 

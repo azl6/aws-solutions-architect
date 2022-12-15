@@ -412,6 +412,24 @@ Saída 2:
 
 ![image](https://user-images.githubusercontent.com/80921933/207770013-f5f5f6fc-5f07-465a-b7af-e5851b209b0a.png)
 
+## Criando rules de roteamento em um Application Load Balancer
+
+No menu do ALB selecionado, clicamos em **View/edit rules**
+
+![Screenshot from 2022-12-15 01-20-11](https://user-images.githubusercontent.com/80921933/207771821-952487fd-e842-4ba2-ab21-c44ad0744392.png)
+
+Podemos clicar no símbolo de **+** e em **Insert rule** para editar regras de roteamento
+
+![Screenshot from 2022-12-15 01-25-41](https://user-images.githubusercontent.com/80921933/207772407-838dcf31-a13b-4346-91ca-94a1d4d1840d.png)
+
+Adicionando uma regra onde, caso o path seja /error, retornar uma mensagem personalizada
+
+![image](https://user-images.githubusercontent.com/80921933/207772155-31b282c0-f304-4e2a-9e2a-7426f8c75b67.png)
+
+Testando a regra
+
+![image](https://user-images.githubusercontent.com/80921933/207772225-94329260-15bb-4fe0-bf88-d6d3f7b23d89.png)
+
 
 
 

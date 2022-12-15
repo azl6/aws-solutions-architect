@@ -373,7 +373,7 @@ Considere as duas instâncias criadas:
 
 ![image](https://user-images.githubusercontent.com/80921933/207766522-52db7948-fc38-41ad-9eff-7e7560eef8e3.png)
 
-Ao acessar a porta 80 de cada, recebemos a seguinte tela:
+Ao acessar a porta 80 de cada, recebemos a seguinte tela (o acesso a cada instância dará um IP diferente):
 
 ![image](https://user-images.githubusercontent.com/80921933/207766694-e8e4f197-aa3f-4119-9e12-5eb9ab9fc716.png)
 

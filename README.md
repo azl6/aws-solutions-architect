@@ -367,6 +367,59 @@ O EFS é montado por padrão em /mnt/efs/fs1.
 - Criar um target-group com elas
 - Fazer um ALB apontar para esse target-group e distribuir a carga
 
+**Solução:**
+
+Considere as duas instâncias criadas:
+
+![image](https://user-images.githubusercontent.com/80921933/207766522-52db7948-fc38-41ad-9eff-7e7560eef8e3.png)
+
+Ao acessar a porta 80 de cada, recebemos a seguinte tela:
+
+![image](https://user-images.githubusercontent.com/80921933/207766694-e8e4f197-aa3f-4119-9e12-5eb9ab9fc716.png)
+
+Para criar um **target group** com as instâncias, acessamos o menu de **Target Groups**
+
+![image](https://user-images.githubusercontent.com/80921933/207766768-e5dd40a6-cf77-46c7-9e44-a907bfaf3e1a.png)
+
+Depois de clicar em **Create target group**. selecionamos a opção **Instances**
+
+![image](https://user-images.githubusercontent.com/80921933/207766898-f016e6fe-0c9e-4d2e-abca-8fbb8a3aa278.png)
+
+Deixamos as demais opções como padrão e vamos para a próxima tela.
+
+Já na tela de **Register targets**, selecionamos as instâncias e clicamos em **Include as pending below**
+
+![image](https://user-images.githubusercontent.com/80921933/207767123-8ea7c8cc-3c33-4b5b-adba-69178732eb66.png)
+
+Depois, clicamos em **Create target group**, e poderemos vê-lo criado no menu de **target groups**
+
+Para criar um **Applcation Load Balancer** para o target group, visitamos o menu de **Load Balancer** e selecionamos a opção **Create Load Balancer**
+
+![image](https://user-images.githubusercontent.com/80921933/207767373-ac19a293-984d-4b17-b5cf-50a9e9e1adc6.png)
+
+Selecionamos a opção **Application Load Balancer**, e configuramos tudo. **Importante:** Deve-se criar um security group exclusivo para o ALB, que permite tráfego HTTP de 0.0.0.0/0
+
+Na aba de **Listeners and routing**, selecionamos o **target group** criado
+
+![image](https://user-images.githubusercontent.com/80921933/207767660-7b282fc0-d929-4d0b-bfce-587d5bd32375.png)
+
+Finalizamos a criação do ALB.
+
+Como nosso **target group** dispõe de duas instâncias EC2 com IP diferente, podemos dar refresh no DNS do ALB, e receberemos duas saídas de IP diferentes, fato que prova que o load-balancer está funcionando
+
+Saída 1:
+
+![image](https://user-images.githubusercontent.com/80921933/207769996-a8551d9d-d527-486c-a5e1-0b3dcc59ab4c.png)
+
+Saída 2:
+
+![image](https://user-images.githubusercontent.com/80921933/207770013-f5f5f6fc-5f07-465a-b7af-e5851b209b0a.png)
+
+
+
+
+
+
 
 
 

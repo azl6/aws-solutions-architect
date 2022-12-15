@@ -430,6 +430,11 @@ Testando a regra
 
 ![image](https://user-images.githubusercontent.com/80921933/207772225-94329260-15bb-4fe0-bf88-d6d3f7b23d89.png)
 
+## Criando um Network Load Balancer
+
+Seguir aula 76. 
+Passo a passo muito similar a criação do ALB. A única diferença é que o NLB não necessita de um security group.
+
 
 
 

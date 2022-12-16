@@ -497,6 +497,33 @@ Com 2 instâncias, veremos dois IPs diferentes a cada vez que acessarmos o DNS d
 
 As alterações no **Activity history** também acontecem em caso de diminuição da variável **desired number of instances**
 
+## Setando o automatic scaling
+
+Nas configurações de um ASG, podemos configurar a aba de **Automatic scaling** com as seguintes opções:
+
+- **Scheduled actions** - Aumenta o número de instâncias na data informada, ex: 10/10/2023, às 13:00, quero 10 instâncias. 
+- **Predictive scaling policies** - Utiliza ML para analisar métricas do passado e escalar baseado nelas. "Forecast".
+- **Dynamic scaling policy** - Podemos usar 3 configurações para esse caso: <br>
+
+    Simple scaling: Executa uma ação (adiciona/remove instâncias) baseado em um **CloudWatch Alarm**
+        
+    ![image](https://user-images.githubusercontent.com/80921933/208170120-2a47833b-5dc2-4fc0-b037-d1b0edd00036.png)
+    
+     Step scaling: Se baseia no valor de um **CloudWatch Alarm**, e faz um "if", dependendo do valor dele, ex: Se o alarme está MUITO alto, adicione 5 instâncias, mas se está alto, mas não tão alto, adicione 2
+     
+     Target-tracking scaling: Cria "automaticamente" um **CloudWatch Alarm** e escala baseado nas definições informadas
+     
+     ![image](https://user-images.githubusercontent.com/80921933/208172198-46d251bc-3aa9-4dff-a8de-0ebd71e96f0a.png)
+
+        
+
+        
+        
+
+
+
+
+
 
 
 

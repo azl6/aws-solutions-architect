@@ -447,6 +447,62 @@ Na tela que se apresenta, basta configurar o stickiness
 
 ![image](https://user-images.githubusercontent.com/80921933/207777249-3e60233b-f43f-4403-9100-a13605b88300.png)
 
+## Criando um Auto-Scaling Group
+
+Primeiro, definimos um **target group**
+
+![image](https://user-images.githubusercontent.com/80921933/208152968-1dde3b52-799c-4910-9288-c32650d10275.png)
+
+No menu de **Auto-Scaling Groups**, selecionamos a opção **Create Auto-Scaling Group**
+
+![image](https://user-images.githubusercontent.com/80921933/208153149-8e6ec874-6274-4c03-a9f1-d3a6ccd6898c.png)
+
+No próximo menu, selecionamos a opção **Create launch template**
+
+![Screenshot from 2022-12-16 14-20-12](https://user-images.githubusercontent.com/80921933/208153570-ffa3c647-e97a-42a3-8d93-757cf7cd28c0.png)
+
+Configuramos tudo normalmente, como se fosse o menu de launch de EC2
+
+Depois da criação do **launch template**, selecionamos-o na tela anterior de criação de um **auto-scaling group**
+
+![image](https://user-images.githubusercontent.com/80921933/208154419-8622b5f6-af1e-4dbe-911b-df083c5eccea.png)
+
+Damos sequência na configuração até o menu de configuração de Load-Balancer. Podemos adicionar um Load-Balancer apontando para o ASG, porém, um ALB **já deve estar associado ao target-group escolhido para que isso funcione adequadamente**
+
+![image](https://user-images.githubusercontent.com/80921933/208155266-626c1da8-fca2-4dc6-8e56-a80f439dc006.png)
+
+Na etapa de health-checks, podemos delegar a responsabilidade de health-checking para o ALB, para que este possa remover unhealthy instances
+
+![image](https://user-images.githubusercontent.com/80921933/208155417-588f36a7-9dcc-40d7-8670-a012b1fb4203.png)
+
+Na configuração inicial do group-size, deixarei da seguinte forma:
+
+![image](https://user-images.githubusercontent.com/80921933/208155622-c5630088-3447-4d1f-8771-70156f2aaf22.png)
+
+Com tudo criado, podemos checar as atividades do ASG pelo **Activity history**, na aba **Activity**
+
+Neste caso, setamos o **desired number of instances para 1**, portanto, o ASG automaticamente criou uma instância e deixou-a ativa.
+
+![image](https://user-images.githubusercontent.com/80921933/208156458-4f353ad4-59c9-4456-9915-225aedab6b1a.png)
+
+Caso alteremos o **desired number of instances** para 2, veremos uma alteração na aba de **Activity history**, que representa a criação de uma nova instância de acordo com a nossa alteração.
+
+![image](https://user-images.githubusercontent.com/80921933/208156875-aa4903ae-a134-482c-ba73-320b29ed96c3.png)
+
+Com 2 instâncias, veremos dois IPs diferentes a cada vez que acessarmos o DNS do Load-Balancer
+
+![image](https://user-images.githubusercontent.com/80921933/208157787-fae22dbd-13d4-41d7-b66f-4b6297ccb9ca.png)
+
+![image](https://user-images.githubusercontent.com/80921933/208157844-4b17c30a-fcfb-43f4-b63e-a9c5c91e9e95.png)
+
+As alterações no **Activity history** também acontecem em caso de diminuição da variável **desired number of instances**
+
+
+
+
+
+
+
 
 
 

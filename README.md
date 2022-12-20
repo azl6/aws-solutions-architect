@@ -514,6 +514,21 @@ Nas configurações de um ASG, podemos configurar a aba de **Automatic scaling**
      Target-tracking scaling: Cria "automaticamente" um **CloudWatch Alarm** e escala baseado nas definições informadas
      
      ![image](https://user-images.githubusercontent.com/80921933/208172198-46d251bc-3aa9-4dff-a8de-0ebd71e96f0a.png)
+     
+## Registrando um domínio no Route 53
+
+Clicamos em **Register Domain**
+
+![image](https://user-images.githubusercontent.com/80921933/208768808-26883769-8cd5-4899-97d5-6f9b2e7f931c.png)
+
+Ao registrar um domínio, teremos um **Hosted Zone** criado, que é a sua URL-base escolhida.
+
+A partir dele, podemos criar os nossos **DNS records**, que são variações da URL do **Hosted Zone**
+
+A partir do **DNS record**, definimos para qual IP aquele **DNS record** irá nos direcionar
+
+![image](https://user-images.githubusercontent.com/80921933/208770473-bd6bca29-ea86-436b-9452-2682edf67764.png)
+
 
         
 

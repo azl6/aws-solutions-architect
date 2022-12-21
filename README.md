@@ -1,4 +1,4 @@
-Esse README se refere **exclusivamente** a atividades de hands-on. Para informações teóricas, refira-se aos demais arquivos do repositório.
+Este README se refere **exclusivamente** a atividades de hands-on. Para informações teóricas, refira-se aos demais arquivos do repositório.
 
 [General info](#general-info) <br>
 

@@ -1,3 +1,5 @@
+[General info](#general-info) <br>
+
 IAM
 
 [Criando usuarios](#criando-usuários-iam) <br>
@@ -6,9 +8,37 @@ IAM
 [Utilizando o AWS Policy Generator](#utilizando-o-aws-policy-generator) <br>
 [Password Policy](#password-policy) <br>
 [MFA device types](#mfa-device-types) <br>
+[IAM Roles](#iam-roles) <br>
+Credentials Report <br>
+Access Advisor <br>
+Permissão na página de billing para IAM users <br>
+Criação de budgets <br>
+EC2 naming convention <br>
+Creating Placement groups <br>
+Elastic network interfaces for EC2 <br>
+Criando um EBS Volume (com ou sem delete on termination) e realizando um multi-attach <br>
+Criando um snapshot a partir de um volume <br>
+Criando um EBS volume a partir de um snapshot <br>
+Copiando um snapshot para outra AZ <br>
+Utilização do Recycle bin para previnir deleções acidentais de snapshots <br>
+Criando uma AMI <br>
+Criando uma EC2 com uma AMI personalizada <br>
+Criando um EBS volume encriptado a partir de um não-encriptado <br>
+Criando um EFS file system <br>
+Attachando um EFS file system a uma EC2 <br>
+Lendo arquivos de um EFS File System compartilhado entre duas EC2 em AZ's diferentes <br>
+Criando um target group para utilizar em um Load Balancer <br>
+Criando um Application Load Balancer <br>
+Criando rules de roteamento em um Application Load Balancer <br>
+Criando um Network Load Balancer <br>
+Adicionando cookies (stickiness) ao Load Balancer <br>
+Criando um Auto-Scaling Group <br>
+Setando o automatic scaling <br>
+Registrando um domínio no Route 53 <br>
 
 
-# General information
+
+## General info
 
 **Important ports**
 

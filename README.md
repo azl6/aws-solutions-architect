@@ -1,37 +1,38 @@
-[General info](general-info) <br>
-[Criando usuários IAM](criando-usuários-iam) <br>
+[General info](#general-info) <br>
+[Criando usuários IAM](#criando-usuários-iam) <br>
 [Aplicação de IAM policies](#aplicação-de-iam-policies) <br>
-[Estrutura de uma IAM policy](estrutura-de-uma-iam-policy) <br>
-[Utilizando o AWS Policy Generator](utilizando-o-aws-policy-generator) <br>
-[Password Policy](password-policy) <br>
-[MFA device types](mfa-device-types) <br>
-[IAM Roles](iam-roles) <br>
-[Credentials Report](credentials-report) <br>
-[Access Advisor](access-advisor) <br>
-[Permissão na página de billing para IAM users](permissão-na-página-de-billing-para-iam-users) <br>
-[Criação de budgets](criação-de-budgets) <br>
-[EC2 naming convention](ec2-naming-convention) <br>
-[Creating Placement groups](creating-placement-groups) <br>
-[Elastic network interfaces for EC2](elastic-network-interfaces-for-ec2) <br>
-[Criando um EBS Volume (com ou sem delete on termination) e realizando um multi-attach](criando-um-eBS-volume-(com-ou-sem-delete-on-termination)-e-realizando-um-multi-attach) <br>
-[Criando um snapshot a partir de um volume](criando-um-snapshot-a-partir-de-um-volume) <br>
-[Criando um EBS volume a partir de um snapshot](criando-um-eBS-volume-a-partir-de-um-snapshot) <br>
-[Copiando um snapshot para outra AZ](copiando-um-snapshot-para-outra-aZ) <br>
-[Utilização do Recycle bin para previnir deleções acidentais de snapshots](utilização-do-recycle-bin-para-previnir-deleções-acidentais-de-snapshots) <br>
-[Criando uma AMI](criando-uma-ami) <br>
-[Criando uma EC2 com uma AMI personalizada](criando-uma-ec2-com-uma-ami-personalizada) <br>
-[Criando um EBS volume encriptado a partir de um não-encriptado](criando-um-eBS-volume-encriptado-a-partir-de-um-não-encriptado) <br>
-[Criando um EFS file system](criando-um-efs-file-system) <br>
-[Attachando um EFS file system a uma EC2](attachando-um-efs-file-system-a-uma-ec2) <br>
-[Lendo arquivos de um EFS File System compartilhado entre duas EC2 em AZ's diferentes](lendo-arquivos-de-um-efs-file-system-compartilhado-entre-duas-ec2-em-aZ's-diferentes) <br>
-[Criando um target group para utilizar em um Load Balancer](criando-um-target-group-para-utilizar-em-um-load-balancer) <br>
-[Criando um Application Load Balancer](criando-um-application-load-balancer) <br>
-[Criando rules de roteamento em um Application Load Balancer](criando-rules-de-roteamento-em-um-application-load-balancer) <br>
-[Criando um Network Load Balancer](criando-um-network-load-balancer) <br>
-[Adicionando cookies (stickiness) ao Load Balancer](adicionando-cookies-(stickiness)-ao-load-balancer) <br>
-[Criando um Auto-Scaling Group](criando-um-auto-Scaling-group) <br>
-[Setando o automatic scaling](setando-o-automatic-scaling) <br>
-[Registrando um domínio no Route 53](registrando-um-domínio-no-route-53) <br>
+[Estrutura de uma IAM policy](#estrutura-de-uma-iam-policy) <br>
+[Utilizando o AWS Policy Generator](#utilizando-o-aws-policy-generator) <br>
+[Password Policy](#password-policy) <br>
+[MFA device types](#mfa-device-types) <br>
+[IAM Roles](#iam-roles) <br>
+[Credentials Report](#credentials-report) <br>
+[Access Advisor](#access-advisor) <br>
+[Permissão na página de billing para IAM users](#permissão-na-página-de-billing-para-iam-users) <br>
+[Criação de budgets](#criação-de-budgets) <br>
+[EC2 naming convention](#ec2-naming-convention) <br>
+[Creating Placement groups](#creating-placement-groups) <br>
+[Elastic network interfaces for EC2](#elastic-network-interfaces-for-ec2) <br>
+[Criando um EBS Volume e realizando um multi attach](#criando-um-ebs-volume-e-realizando-um-multi-attach) <br>
+[Criando um snapshot a partir de um volume](#criando-um-snapshot-a-partir-de-um-volume) <br>
+[Criando um EBS volume a partir de um snapshot](#criando-um-ebs-volume-a-partir-de-um-snapshot) <br>
+[Copiando um snapshot para outra AZ](#copiando-um-snapshot-para-outra-az) <br>
+[Utilização do Recycle bin para previnir deleções acidentais de snapshots](#utilização-do-recycle-bin-para-previnir-deleções-acidentais-de-snapshots) <br>
+[Criando uma AMI](#criando-uma-ami) <br>
+[Criando uma EC2 com uma AMI personalizada](#criando-uma-ec2-com-uma-ami-personalizada) <br>
+[Criando um EBS volume encriptado a partir de um não encriptado](#criando-um-ebs-volume-encriptado-a-partir-de-um-não-encriptado) <br>
+[Criando um EFS file system](#criando-um-efs-file-system) <br>
+[Attachando um EFS file system a uma EC2](#attachando-um-efs-file-system-a-uma-ec2) <br>
+[Lendo arquivos de um EFS File System compartilhado entre duas EC2 em AZs diferentes](#lendo-arquivos-de-um-efs-file-system-compartilhado-entre-duas-ec2-em-azs-diferentes) <br>
+[Criando um target group para utilizar em um Load Balancer](#criando-um-target-group-para-utilizar-em-um-load-balancer) <br>
+[Criando um Application Load Balancer](#criando-um-application-load-balancer) <br>
+[Criando rules de roteamento em um Application Load Balancer](#criando-rules-de-roteamento-em-um-application-load-balancer) <br>
+[Criando um Network Load Balancer](#criando-um-network-load-balancer) <br>
+[Adicionando cookies e stickness ao Load Balancer](#adicionando-cookies-e-stickness-ao-load-balancer) <br>
+[Criando um Auto Scaling Group](#criando-um-auto-scaling-group) <br>
+[Setando o automatic scaling](#setando-o-automatic-scaling) <br>
+[Registrando um domínio no Route 53](#registrando-um-domínio-no-route-53) <br>
+
 
 
 
@@ -210,7 +211,7 @@ We just need to choose an instance and it's done!
 
 # Elastic Block Store (EBS)
 
-## Criando um EBS Volume (com ou sem delete on termination) e realizando um multi-attach
+## Criando um EBS Volume e realizando um multi attach
 
 Ao criar uma instância EC2, podemos acessar opções mais avançadas na aba de **Storage**. Lá, definimos se queremos a flag **delete on termination** ON ou OFF para os EBS volumes. Neste exemplo, deixarei **ON**.
 
@@ -320,7 +321,7 @@ Alternativamente, podemos selecionar a AMI no menu de criação de EC2, em **My 
 
 Depois, basta seguir o procedimento padrão de criação de EC2.
 
-## Criando um EBS volume encriptado a partir de um não-encriptado
+## Criando um EBS volume encriptado a partir de um não encriptado
 
 ![image](https://user-images.githubusercontent.com/80921933/207668790-c5963cd4-a0b5-4196-a132-8a7c54e8d132.png)
 
@@ -360,7 +361,7 @@ No próximo menu, selecionamos o **file system** e o **mount point**, que será 
 
 Depois, basta criar o EC2 normalmente.
 
-## Lendo arquivos de um EFS File System compartilhado entre duas EC2 em AZ's diferentes
+## Lendo arquivos de um EFS File System compartilhado entre duas EC2 em AZs diferentes
 
 Escrevendo da instância 1:
 
@@ -457,7 +458,7 @@ Testando a regra
 Seguir aula 76. 
 Passo a passo muito similar a criação do ALB. A única diferença é que o NLB não necessita de um security group.
 
-## Adicionando cookies (stickiness) ao Load Balancer
+## Adicionando cookies e stickness ao Load Balancer
 
 Essa opção significa que um usuário, em seu primeiro acesso, fica "vinculado" à instância a qual o ALB o direciona pela primeira vez, por um período de tempo estabelecido.
 
@@ -469,7 +470,7 @@ Na tela que se apresenta, basta configurar o stickiness
 
 ![image](https://user-images.githubusercontent.com/80921933/207777249-3e60233b-f43f-4403-9100-a13605b88300.png)
 
-## Criando um Auto-Scaling Group
+## Criando um Auto Scaling Group
 
 Primeiro, definimos um **target group**
 

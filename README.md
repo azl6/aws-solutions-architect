@@ -2,6 +2,8 @@
 
 IAM
 
+Finalizar isso com - cat readmesaa | grep '##' | sed 's/## //g' | awk '{print $0" <br>"}'
+
 [Criando usuarios](#criando-usuários-iam) <br>
 [Aplicação de IAM policies](#aplicação-de-iam-policies) <br>
 [Estrutura de uma IAM policy](#estrutura-de-uma-iam-policy) <br>

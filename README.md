@@ -1,42 +1,38 @@
-[General info](#general-info) <br>
-
-IAM
-
-Finalizar isso com - cat readmesaa | grep '##' | sed 's/## //g' | awk '{print $0" <br>"}'
-
-[Criando usuarios](#criando-usuários-iam) <br>
+[General info](general-info) <br>
+[Criando usuários IAM](criando-usuários-iam) <br>
 [Aplicação de IAM policies](#aplicação-de-iam-policies) <br>
-[Estrutura de uma IAM policy](#estrutura-de-uma-iam-policy) <br>
-[Utilizando o AWS Policy Generator](#utilizando-o-aws-policy-generator) <br>
-[Password Policy](#password-policy) <br>
-[MFA device types](#mfa-device-types) <br>
-[IAM Roles](#iam-roles) <br>
-Credentials Report <br>
-Access Advisor <br>
-Permissão na página de billing para IAM users <br>
-Criação de budgets <br>
-EC2 naming convention <br>
-Creating Placement groups <br>
-Elastic network interfaces for EC2 <br>
-Criando um EBS Volume (com ou sem delete on termination) e realizando um multi-attach <br>
-Criando um snapshot a partir de um volume <br>
-Criando um EBS volume a partir de um snapshot <br>
-Copiando um snapshot para outra AZ <br>
-Utilização do Recycle bin para previnir deleções acidentais de snapshots <br>
-Criando uma AMI <br>
-Criando uma EC2 com uma AMI personalizada <br>
-Criando um EBS volume encriptado a partir de um não-encriptado <br>
-Criando um EFS file system <br>
-Attachando um EFS file system a uma EC2 <br>
-Lendo arquivos de um EFS File System compartilhado entre duas EC2 em AZ's diferentes <br>
-Criando um target group para utilizar em um Load Balancer <br>
-Criando um Application Load Balancer <br>
-Criando rules de roteamento em um Application Load Balancer <br>
-Criando um Network Load Balancer <br>
-Adicionando cookies (stickiness) ao Load Balancer <br>
-Criando um Auto-Scaling Group <br>
-Setando o automatic scaling <br>
-Registrando um domínio no Route 53 <br>
+[Estrutura de uma IAM policy](estrutura-de-uma-iam-policy) <br>
+[Utilizando o AWS Policy Generator](utilizando-o-aws-policy-generator) <br>
+[Password Policy](password-policy) <br>
+[MFA device types](mfa-device-types) <br>
+[IAM Roles](iam-roles) <br>
+[Credentials Report](credentials-report) <br>
+[Access Advisor](access-advisor) <br>
+[Permissão na página de billing para IAM users](permissão-na-página-de-billing-para-iam-users) <br>
+[Criação de budgets](criação-de-budgets) <br>
+[EC2 naming convention](ec2-naming-convention) <br>
+[Creating Placement groups](creating-placement-groups) <br>
+[Elastic network interfaces for EC2](elastic-network-interfaces-for-ec2) <br>
+[Criando um EBS Volume (com ou sem delete on termination) e realizando um multi-attach](criando-um-eBS-volume-(com-ou-sem-delete-on-termination)-e-realizando-um-multi-attach) <br>
+[Criando um snapshot a partir de um volume](criando-um-snapshot-a-partir-de-um-volume) <br>
+[Criando um EBS volume a partir de um snapshot](criando-um-eBS-volume-a-partir-de-um-snapshot) <br>
+[Copiando um snapshot para outra AZ](copiando-um-snapshot-para-outra-aZ) <br>
+[Utilização do Recycle bin para previnir deleções acidentais de snapshots](utilização-do-recycle-bin-para-previnir-deleções-acidentais-de-snapshots) <br>
+[Criando uma AMI](criando-uma-ami) <br>
+[Criando uma EC2 com uma AMI personalizada](criando-uma-ec2-com-uma-ami-personalizada) <br>
+[Criando um EBS volume encriptado a partir de um não-encriptado](criando-um-eBS-volume-encriptado-a-partir-de-um-não-encriptado) <br>
+[Criando um EFS file system](criando-um-efs-file-system) <br>
+[Attachando um EFS file system a uma EC2](attachando-um-efs-file-system-a-uma-ec2) <br>
+[Lendo arquivos de um EFS File System compartilhado entre duas EC2 em AZ's diferentes](lendo-arquivos-de-um-efs-file-system-compartilhado-entre-duas-ec2-em-aZ's-diferentes) <br>
+[Criando um target group para utilizar em um Load Balancer](criando-um-target-group-para-utilizar-em-um-load-balancer) <br>
+[Criando um Application Load Balancer](criando-um-application-load-balancer) <br>
+[Criando rules de roteamento em um Application Load Balancer](criando-rules-de-roteamento-em-um-application-load-balancer) <br>
+[Criando um Network Load Balancer](criando-um-network-load-balancer) <br>
+[Adicionando cookies (stickiness) ao Load Balancer](adicionando-cookies-(stickiness)-ao-load-balancer) <br>
+[Criando um Auto-Scaling Group](criando-um-auto-Scaling-group) <br>
+[Setando o automatic scaling](setando-o-automatic-scaling) <br>
+[Registrando um domínio no Route 53](registrando-um-domínio-no-route-53) <br>
+
 
 
 

@@ -1,3 +1,13 @@
+IAM
+
+[Criando usuarios](#criando-usuários-iam) <br>
+[Aplicação de IAM policies](#aplicação-de-iam-policies) <br>
+[Estrutura de uma IAM policy](#estrutura-de-uma-iam-policy) <br>
+[Utilizando o AWS Policy Generator](#utilizando-o-aws-policy-generator) <br>
+[Password Policy](#password-policy) <br>
+[MFA device types](#mfa-device-types) <br>
+
+
 # General information
 
 **Important ports**
@@ -6,22 +16,7 @@
 
 **EC2 Instance Connect (browser-based connection to an EC2 instance) uses SSH behind the blankets. So you still need to allow connections to port 22.**
 
-# IAM
-
-Práticas para dominar:
-
-- Criação de usuários
-- Login com um usuário IAM
-- Utilização de alias no Account ID
-- Inserção de usuários em grupos
-- Estrutura das IAM policies
-- Password Policies
-- Implementação do MFA
-- Uso do Access Key ID e Secret Access Key
-- Utilização das IAM Roles
-- Credentials Report e Access Advisor
-
-## Criando usuários
+## Criando usuários IAM
 
 Podemos criar usuários normalmente, inserí-los em grupos e atribuir policies a tais grupos. Depois de criado, podemos logar com o usuário no console através da url fornecida em **IAM > Dashboard**. 
 
@@ -37,18 +32,20 @@ Seremos redirecionados para a página de login do IAM, bastando informar o resta
 
 ![image](https://user-images.githubusercontent.com/80921933/206605622-1306cf0b-5dca-4a0c-aadc-9bc220ed7e9f.png)
 
-
-## IAM Policies
-
 ### Aplicação de IAM policies
 
 ![image](https://user-images.githubusercontent.com/80921933/206606002-f1a739ca-e0d2-4cfb-862f-a88f0d4fec9d.png)
 
 
-### Estrutura de uma IAM policy
+## Estrutura de uma IAM policy
 
 ![image](https://user-images.githubusercontent.com/80921933/206606247-a3bc864f-bb64-4e18-8e5f-fcf43b628533.png)
 
+## Utilizando o AWS Policy Generator
+
+O seguinte site pode ser usado para gerar policies de maneira intuitiva:
+
+https://awspolicygen.s3.amazonaws.com/policygen.html
 
 ## Password Policy
 
@@ -60,10 +57,7 @@ Lá, podemos customizar a estrutura das senhas dos **IAM users** criados naquela
 
 ![image](https://user-images.githubusercontent.com/80921933/206610296-59ffa04a-4bed-4654-8af4-ac318c5ce5ca.png)
 
-
-## Multi-factor authentication (MFA)
-
-### MFA device types
+## MFA device types
 
 ![image](https://user-images.githubusercontent.com/80921933/206609291-4649ee2a-89ef-4a8a-93bb-06833cfe0efd.png)
 

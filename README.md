@@ -1,4 +1,9 @@
+Esse repositório se refere **exclusivamente** a atividades de hands-on. Para informações teóricas, refira-se aos demais arquivos do repositório.
+
 [General info](#general-info) <br>
+
+**IAM**
+
 [Criando usuários IAM](#criando-usuários-iam) <br>
 [Aplicação de IAM policies](#aplicação-de-iam-policies) <br>
 [Estrutura de uma IAM policy](#estrutura-de-uma-iam-policy) <br>
@@ -9,21 +14,40 @@
 [Credentials Report](#credentials-report) <br>
 [Access Advisor](#access-advisor) <br>
 [Permissão na página de billing para IAM users](#permissão-na-página-de-billing-para-iam-users) <br>
+
+**Billing**
+
 [Criação de budgets](#criação-de-budgets) <br>
+
+**AMI**
+
+[Criando uma AMI](#criando-uma-ami) <br>
+[Criando uma EC2 com uma AMI personalizada](#criando-uma-ec2-com-uma-ami-personalizada) <br>
+
+**EC2**
+
 [EC2 naming convention](#ec2-naming-convention) <br>
 [Creating Placement groups](#creating-placement-groups) <br>
 [Elastic network interfaces for EC2](#elastic-network-interfaces-for-ec2) <br>
+
+
+**EBS**
+
 [Criando um EBS Volume e realizando um multi attach](#criando-um-ebs-volume-e-realizando-um-multi-attach) <br>
 [Criando um snapshot a partir de um volume](#criando-um-snapshot-a-partir-de-um-volume) <br>
 [Criando um EBS volume a partir de um snapshot](#criando-um-ebs-volume-a-partir-de-um-snapshot) <br>
 [Copiando um snapshot para outra AZ](#copiando-um-snapshot-para-outra-az) <br>
 [Utilização do Recycle bin para previnir deleções acidentais de snapshots](#utilização-do-recycle-bin-para-previnir-deleções-acidentais-de-snapshots) <br>
-[Criando uma AMI](#criando-uma-ami) <br>
-[Criando uma EC2 com uma AMI personalizada](#criando-uma-ec2-com-uma-ami-personalizada) <br>
 [Criando um EBS volume encriptado a partir de um não encriptado](#criando-um-ebs-volume-encriptado-a-partir-de-um-não-encriptado) <br>
+
+**EFS**
+
 [Criando um EFS file system](#criando-um-efs-file-system) <br>
 [Attachando um EFS file system a uma EC2](#attachando-um-efs-file-system-a-uma-ec2) <br>
 [Lendo arquivos de um EFS File System compartilhado entre duas EC2 em AZs diferentes](#lendo-arquivos-de-um-efs-file-system-compartilhado-entre-duas-ec2-em-azs-diferentes) <br>
+
+**Load-Balancers**
+
 [Criando um target group para utilizar em um Load Balancer](#criando-um-target-group-para-utilizar-em-um-load-balancer) <br>
 [Criando um Application Load Balancer](#criando-um-application-load-balancer) <br>
 [Criando rules de roteamento em um Application Load Balancer](#criando-rules-de-roteamento-em-um-application-load-balancer) <br>
@@ -31,6 +55,9 @@
 [Adicionando cookies e stickness ao Load Balancer](#adicionando-cookies-e-stickness-ao-load-balancer) <br>
 [Criando um Auto Scaling Group](#criando-um-auto-scaling-group) <br>
 [Setando o automatic scaling](#setando-o-automatic-scaling) <br>
+
+**Route 53**
+
 [Registrando um domínio no Route 53](#registrando-um-domínio-no-route-53) <br>
 
 

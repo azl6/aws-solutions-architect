@@ -62,7 +62,8 @@ Este README se refere **exclusivamente** a atividades de hands-on. Para informa�
 
 **S3**
 
-[Hosteando um website estático no S3](#registrando-um-domínio-no-route-53) <br>
+[Hosteando um website estático no S3](#hosteando-um-website-estático-no-s3) <br>
+[Ativando o S3 versioning](#ativando-o-s3-versioning)
 
 
 ## General info
@@ -595,6 +596,22 @@ Basta clicarmos em **Edit** e configurar as opções. Nomearei de **index.html**
 ![image](https://user-images.githubusercontent.com/80921933/209164720-8678cbdf-b3cc-4979-b967-e2f20d87e71e.png)
 
 Depois, basta anexar o arquivo ao bucket, e acessar a url pública disponibilizada.
+
+## Ativando o S3 versioning
+
+Nas properties de um bucket, selecionamos **Bucket versioning**
+
+![image](https://user-images.githubusercontent.com/80921933/209165807-9a3eb3c2-45ba-4bc9-810d-b7f8402d51ff.png)
+
+Após ativarmos a opção, podemos realizar o re-upload para o S3. Todas as versões do arquivo serão visíveis
+
+![image](https://user-images.githubusercontent.com/80921933/209166216-97c60d7e-bc30-47ce-b2b1-5f7a2bdc9eb0.png)
+
+Importante ressaltar que objetos uploaded antes de ativar o versionamento terão o seu **Version Id** = null
+
+Ao deletar versões, o S3 restaurará a última versão disponível.
+
+Ao deletar um objeto inteiro, inserimos um **Delete Marker** no objeto, que é uma flag para não expor aquele objeto.
 
 
 

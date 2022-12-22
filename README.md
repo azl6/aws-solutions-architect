@@ -64,7 +64,9 @@ Este README se refere **exclusivamente** a atividades de hands-on. Para informa�
 
 [Hosteando um website estático no S3](#hosteando-um-website-estático-no-s3) <br>
 [Ativando o S3 versioning](#ativando-o-s3-versioning) <br>
-[Ativando a replicação de objetos no S3](#ativando-a-replicação-de-objetos-no-s3)
+[Ativando a replicação de objetos no S3](#ativando-a-replicação-de-objetos-no-s3) <br>
+[Inserindo um objeto em algum storage class](#inserindo-um-objeto-em-algum-storage-class) <br>
+[Ativando o Lifecycle management](#ativando-o-lifecycle-management) <br>
 
 
 ## General info
@@ -634,59 +636,26 @@ Após selecionar o bucket de destino e configurar as demais opções, a replica�
 
 Por outro lado, deletes permanentes **não são replicados.**
 
+## Inserindo um objeto em algum storage class
 
+Ao inserir um objeto em um bucket, podemos acessar a aba de **Properties** e definir para qual storage class aquele objeto irá
 
+![image](https://user-images.githubusercontent.com/80921933/209182147-906244f7-1dcb-43ed-8ce9-57f85d791b71.png)
 
+No menu do bucket, poderemos ver o storage class escolhido, que também pode ser posteriormente alterado clicando-se no objeto
 
+## Ativando o Lifecycle management
 
-        
+Nas opções de um bucket, clicamos em **Management** e acessamos a aba **Lifecycle rules**
 
-        
-        
+Clicamos em **Create lifecycle rule**
 
+![image](https://user-images.githubusercontent.com/80921933/209185600-88b6e5a7-82a7-4a19-a96f-558b6b72ccc5.png)
 
+Em **Lifecycle rule actions**, podemos escolher os tipos de regras desejadas
 
+![image](https://user-images.githubusercontent.com/80921933/209185274-e6c8c688-9865-4946-93cc-fae976027363.png)
 
+Depois, basta criar as regras de transição de dados desejada
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![image](https://user-images.githubusercontent.com/80921933/209185541-7a954502-6714-43c8-a8e4-1f84075bcb3e.png)

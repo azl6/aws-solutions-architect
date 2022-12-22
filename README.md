@@ -63,7 +63,7 @@ Este README se refere **exclusivamente** a atividades de hands-on. Para informa�
 **S3**
 
 [Hosteando um website estático no S3](#hosteando-um-website-estático-no-s3) <br>
-[Ativando o S3 versioning](#ativando-o-s3-versioning)
+[Ativando o S3 versioning](#ativando-o-s3-versioning) <br>
 [Ativando a replicação de objetos no S3](#ativando-a-replicação-de-objetos-no-s3)
 
 

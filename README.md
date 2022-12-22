@@ -60,8 +60,9 @@ Este README se refere **exclusivamente** a atividades de hands-on. Para informa�
 
 [Registrando um domínio no Route 53](#registrando-um-domínio-no-route-53) <br>
 
+**S3**
 
-
+[Hosteando um website estático no S3](#registrando-um-domínio-no-route-53) <br>
 
 
 ## General info
@@ -578,6 +579,23 @@ A partir dele, podemos criar os nossos **DNS records**, que são variações da 
 A partir do **DNS record**, definimos para qual IP aquele **DNS record** irá nos direcionar
 
 ![image](https://user-images.githubusercontent.com/80921933/208770473-bd6bca29-ea86-436b-9452-2682edf67764.png)
+
+## Hosteando um website estático no S3
+
+Acessamos a opção **Properties**, nas configurações de um bucket
+
+![image](https://user-images.githubusercontent.com/80921933/209164249-ff47e3b1-f788-4d09-a6a8-27aea754aba2.png)
+
+Ao final da aba, selecionamos a opção **Static website hosting**
+
+![image](https://user-images.githubusercontent.com/80921933/209164474-18d7c75f-a908-4862-986d-3e01002c7988.png)
+
+Basta clicarmos em **Edit** e configurar as opções. Nomearei de **index.html** o arquivo do website, podendo ser alterado.
+
+![image](https://user-images.githubusercontent.com/80921933/209164720-8678cbdf-b3cc-4979-b967-e2f20d87e71e.png)
+
+Depois, basta anexar o arquivo ao bucket, e acessar a url pública disponibilizada.
+
 
 
         

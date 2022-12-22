@@ -64,6 +64,7 @@ Este README se refere **exclusivamente** a atividades de hands-on. Para informa�
 
 [Hosteando um website estático no S3](#hosteando-um-website-estático-no-s3) <br>
 [Ativando o S3 versioning](#ativando-o-s3-versioning)
+[Ativando a replicação de objetos no S3](#ativando-a-replicação-de-objetos-no-s3)
 
 
 ## General info
@@ -612,6 +613,29 @@ Importante ressaltar que objetos uploaded antes de ativar o versionamento terão
 Ao deletar versões, o S3 restaurará a última versão disponível.
 
 Ao deletar um objeto inteiro, inserimos um **Delete Marker** no objeto, que é uma flag para não expor aquele objeto.
+
+## Ativando a replicação de objetos no S3
+
+Para que a replicação funcione, **o bucket-versioning deve estar ativo em ambos!**
+
+Supondo que temos os dois buckets criados em regiões diferentes
+
+![image](https://user-images.githubusercontent.com/80921933/209173836-5ba9af2f-c422-4ccb-b57c-9bbe58414539.png)
+
+Nas configurações do bucket de origem, vamos para **Management** > **Replication rules** > **Create replication rule**
+
+![image](https://user-images.githubusercontent.com/80921933/209174377-a77f8a64-c0e0-4230-a17f-933c666f8202.png)
+
+Após selecionar o bucket de destino e configurar as demais opções, a replicação estará funcional.
+
+**Importante:** Por padrão, **Delete Markers** não são replicados, mas podemos alterar esse comportamento pela seguinte opção:
+
+![image](https://user-images.githubusercontent.com/80921933/209174632-2f3afef4-87a2-4693-8b60-9b64c103e4fb.png)
+
+Por outro lado, deletes permanentes **não são replicados.**
+
+
+
 
 
 

@@ -75,7 +75,9 @@ Este README se refere **exclusivamente** a atividades de hands-on. Para informa√
 
 ![image](https://user-images.githubusercontent.com/80921933/206866069-3f848d15-a163-4523-9330-bc46e8af2816.png)
 
-**EC2 Instance Connect (browser-based connection to an EC2 instance) uses SSH behind the blankets. So you still need to allow connections to port 22.**
+**EC2 Instance Connect** (browser-based connection to an EC2 instance) uses SSH behind the blankets. So you still need to allow connections to port 22.
+
+**IAM Policy Simulator** Can be used to test your IAM policies and check whether they allow or deny an API call. Link to the tool: https://policysim.aws.amazon.com/home/index.jsp?#
 
 ## Criando usu√°rios IAM
 

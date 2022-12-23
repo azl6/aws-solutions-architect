@@ -70,7 +70,7 @@ Este README se refere **exclusivamente** a atividades de hands-on. Para informa�
 [Ativando encriptação em objetos no S3](#ativando-encriptação-em-objetos-no-s3) <br>
 [Ativando encriptação padrão em um bucket no S3](#ativando-encriptação-padrão-em-um-bucket-no-s3) <br>
 [Liberando CORS no S3](#liberando-cors-no-s3) <br>
-
+[Ativando e desativando o S3 MFA Delete](#ativando-e-desativando-o-s3-mfa-delete) <br>
 
 
 ## General info
@@ -701,7 +701,7 @@ Basta escrevermos o JSON, permitindo as origins desejadas.
 
 Feature que só permite que deletemos objetos de um bucket com um código fornecido pelo MFA
 
-Para ativar esta feature, basta rodar os comandos abaixo:
+Para ativar esta feature, basta rodar os comandos abaixo (tendo o Access Key ID e Secret Access Key configurados com o **aws configure**):
 
 ![image](https://user-images.githubusercontent.com/80921933/209412020-299170e4-293d-461d-8e1c-e08b6aec601b.png)
 

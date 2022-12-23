@@ -67,7 +67,10 @@ Este README se refere **exclusivamente** a atividades de hands-on. Para informa�
 [Ativando a replicação de objetos no S3](#ativando-a-replicação-de-objetos-no-s3) <br>
 [Inserindo um objeto em algum storage class](#inserindo-um-objeto-em-algum-storage-class) <br>
 [Ativando o Lifecycle management](#ativando-o-lifecycle-management) <br>
+[Ativando encriptação em objetos no S3](#ativando-encriptação-em-objetos-no-s3) <br>
+[Ativando encriptação padrão em um bucket no S3](#ativando-encriptação-padrão-em-um-bucket-no-s3) <br>
 [Liberando CORS no S3](#liberando-cors-no-s3) <br>
+
 
 
 ## General info
@@ -662,6 +665,20 @@ Em **Lifecycle rule actions**, podemos escolher os tipos de regras desejadas
 Depois, basta criar as regras de transição de dados desejada
 
 ![image](https://user-images.githubusercontent.com/80921933/209185541-7a954502-6714-43c8-a8e4-1f84075bcb3e.png)
+
+# Ativando encriptação em objetos no S3
+
+Ao realizar o upload de um objeto, podemos acessar a opção **Server-side encryption**, no final da página, e escolher a opção desejada
+
+![Screenshot from 2022-12-23 19-41-44](https://user-images.githubusercontent.com/80921933/209411222-e01f9e3a-2c66-45f5-bfd7-11a0a956a0dd.png)
+
+# Ativando encriptação padrão em um bucket no S3
+
+Nas configurações de um bucket, na aba **Properties**, acessamos a opção **Edit default encryption**
+
+![image](https://user-images.githubusercontent.com/80921933/209411348-d806ba68-0656-4f7c-82c1-751dcdacb21f.png)
+
+Daí, basta escolher o recurso para encriptação.
 
 ## Liberando CORS no S3
 

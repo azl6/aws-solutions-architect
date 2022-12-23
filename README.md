@@ -680,6 +680,11 @@ Nas configurações de um bucket, na aba **Properties**, acessamos a opção **E
 
 Daí, basta escolher o recurso para encriptação.
 
+Também é possível sobreescrever o mecanismo de encriptação do bucket no momento do upload de um objeto:
+
+![image](https://user-images.githubusercontent.com/80921933/209411552-88ec1e8c-10f3-44b3-8408-43250229c465.png)
+
+
 ## Liberando CORS no S3
 
 Na sessão **Permissions** de um bucket, no final da página, temos as configurações de CORS

@@ -67,6 +67,7 @@ Este README se refere **exclusivamente** a atividades de hands-on. Para informa�
 [Ativando a replicação de objetos no S3](#ativando-a-replicação-de-objetos-no-s3) <br>
 [Inserindo um objeto em algum storage class](#inserindo-um-objeto-em-algum-storage-class) <br>
 [Ativando o Lifecycle management](#ativando-o-lifecycle-management) <br>
+[Liberando CORS no S3](#liberando-cors-no-s3) <br>
 
 
 ## General info
@@ -661,3 +662,15 @@ Em **Lifecycle rule actions**, podemos escolher os tipos de regras desejadas
 Depois, basta criar as regras de transição de dados desejada
 
 ![image](https://user-images.githubusercontent.com/80921933/209185541-7a954502-6714-43c8-a8e4-1f84075bcb3e.png)
+
+## Liberando CORS no S3
+
+Na sessão **Properties** de um bucket, no final da página, temos as configurações de CORS
+
+![image](https://user-images.githubusercontent.com/80921933/209410980-9ad74c64-bb7e-448c-a082-631f31551d2e.png)
+
+Essas configurações são escritas em JSON, como nesse caso:
+
+![image](https://user-images.githubusercontent.com/80921933/209411002-25101ae9-8a49-4698-90d9-ca11538b7273.png)
+
+Basta escrevermos o JSON, permitindo as origins desejadas.

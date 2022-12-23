@@ -696,3 +696,12 @@ Essas configurações são escritas em JSON, como nesse caso:
 ![image](https://user-images.githubusercontent.com/80921933/209411002-25101ae9-8a49-4698-90d9-ca11538b7273.png)
 
 Basta escrevermos o JSON, permitindo as origins desejadas.
+
+## Ativando e desativando o S3 MFA Delete
+
+Feature que só permite que deletemos objetos de um bucket com um código fornecido pelo MFA
+
+Para ativar esta feature, basta rodar os comandos abaixo:
+
+![image](https://user-images.githubusercontent.com/80921933/209412020-299170e4-293d-461d-8e1c-e08b6aec601b.png)
+

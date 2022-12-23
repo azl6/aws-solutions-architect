@@ -665,7 +665,7 @@ Depois, basta criar as regras de transição de dados desejada
 
 ## Liberando CORS no S3
 
-Na sessão **Properties** de um bucket, no final da página, temos as configurações de CORS
+Na sessão **Permissions** de um bucket, no final da página, temos as configurações de CORS
 
 ![image](https://user-images.githubusercontent.com/80921933/209410980-9ad74c64-bb7e-448c-a082-631f31551d2e.png)
 

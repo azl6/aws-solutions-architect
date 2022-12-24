@@ -80,7 +80,8 @@ Este README se refere **exclusivamente** a atividades de hands-on. Para informa�
 
 **SQS**
 
-[Criando uma fila no SQS](#criando-uma-fila-no-sqs) <br>
+[Criando uma fila Standard no SQS](#criando-uma-fila-standard-no-sqs) <br>
+[Criando uma fila FIFO no SQS](#criando-uma-fila-fifo-no-sqs) <br>
 [Enviando e recebendo mensagens pelo console](#enviando-e-recebendo-mensagens-pelo-console)
 
 ## General info
@@ -765,7 +766,7 @@ No topo da próxima página, veremos a seguinte mensagem:
 
 Basta copiar a policy gerada, inserí-la no bucket, e acessar o DNS fornecido pelo CloudFront. Os dados já estarão com o cache sendo realizado.
 
-## Criando uma fila no SQS
+## Criando uma fila Standard no SQS
 
 Na tela inicial do serviço, clicamos em **Create Queue**
 
@@ -774,6 +775,10 @@ Na tela inicial do serviço, clicamos em **Create Queue**
 Na sessão de configurações, definimos uma série de aspectos, como: encriptação, quem pode mandar e receber mensagens da fila (somente o dono e/ou IAM users), tipo da fila (Standard ou FIFO), etc.
 
 Após finalizar as configurações, basta clicar em **Create Queue** no final da página.
+
+## Criando uma fila FIFO no SQS
+
+Basta seguir o procedimento padrão da criação de uma fila Standard, porém, o nome deve conter o sufixo **.fifo**. Ex: MinhaFila.fifo
 
 ## Enviando e recebendo mensagens pelo console
 

@@ -71,8 +71,8 @@ Este README se refere **exclusivamente** a atividades de hands-on. Para informa�
 [Ativando encriptação padrão em um bucket no S3](#ativando-encriptação-padrão-em-um-bucket-no-s3) <br>
 [Liberando CORS no S3](#liberando-cors-no-s3) <br>
 [Ativando e desativando o S3 MFA Delete](#ativando-e-desativando-o-s3-mfa-delete) <br>
-[Ativando o S3 Access Logs](#ativando-o-s3-access-logs)
-[gerando pre signed urls](#gerando-pre-signed-urls)
+[Ativando o S3 Access Logs](#ativando-o-s3-access-logs) <br>
+[Gerando pre signed urls](#gerando-pre-signed-urls)
 
 
 ## General info

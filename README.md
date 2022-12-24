@@ -78,6 +78,11 @@ Este README se refere **exclusivamente** a atividades de hands-on. Para informa�
 
 [Inserindo um bucket do S3 no cache do CloudFront](#inserindo-um-bucket-do-s3-no-cache-do-cloudfront)
 
+**SQS**
+
+[Criando uma fila no SQS](#criando-uma-fila-no-sqs)
+[Enviando e recebendo mensagens pelo console](#enviando-e-recebendo-mensagens-pelo-console)
+
 ## General info
 
 **Important ports**
@@ -759,5 +764,42 @@ No topo da próxima página, veremos a seguinte mensagem:
 ![image](https://user-images.githubusercontent.com/80921933/209419572-07441d22-02eb-4473-b8fc-c4c5ba133c61.png)
 
 Basta copiar a policy gerada, inserí-la no bucket, e acessar o DNS fornecido pelo CloudFront. Os dados já estarão com o cache sendo realizado.
+
+## Criando uma fila no SQS
+
+Na tela inicial do serviço, clicamos em **Create Queue**
+
+![image](https://user-images.githubusercontent.com/80921933/209453186-c578002c-2f4c-4052-a7c1-7b71e8d7adc0.png)
+
+Na sessão de configurações, definimos uma série de aspectos, como: encriptação, quem pode mandar e receber mensagens da fila (somente o dono e/ou IAM users), tipo da fila (Standard ou FIFO), etc.
+
+Após finalizar as configurações, basta clicar em **Create Queue** no final da página.
+
+## Enviando e recebendo mensagens pelo console
+
+Com a fila criada, clicamos em **Send and receive messages**
+
+![image](https://user-images.githubusercontent.com/80921933/209453222-e39a8cdb-f3f2-423b-bb6d-1da0f187f380.png)
+
+Basta escrevermos uma mensagem e clicar em **Send message**
+
+![image](https://user-images.githubusercontent.com/80921933/209453232-c56cf8ac-a002-4d39-8723-40625c1a6288.png)
+
+A aba de **Receive messages**, localizada logo abaixo, nos informará acerca da mensagem recebida
+
+![image](https://user-images.githubusercontent.com/80921933/209453239-c9beb539-2d9d-44fb-87fb-e1038dc597d0.png)
+
+Podemos clicar no botão **Poll for messages** para que a mensagem seja mostrada
+
+![image](https://user-images.githubusercontent.com/80921933/209453248-1ef16d18-e1ab-48d7-9b99-13e42972f381.png)
+
+Ao clicar na mensagem, poderemos acessar suas informações
+
+![image](https://user-images.githubusercontent.com/80921933/209453255-a4384c79-5d53-4205-a12b-9e410fcb35a0.png)
+
+Após a leitura da mensagem, deve-se apagá-la.
+
+
+
 
 

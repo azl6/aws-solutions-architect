@@ -80,7 +80,7 @@ Este README se refere **exclusivamente** a atividades de hands-on. Para informa√
 
 **SQS**
 
-[Criando uma fila no SQS](#criando-uma-fila-no-sqs)
+[Criando uma fila no SQS](#criando-uma-fila-no-sqs) <br>
 [Enviando e recebendo mensagens pelo console](#enviando-e-recebendo-mensagens-pelo-console)
 
 ## General info

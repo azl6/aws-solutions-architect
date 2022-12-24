@@ -71,6 +71,7 @@ Este README se refere **exclusivamente** a atividades de hands-on. Para informa�
 [Ativando encriptação padrão em um bucket no S3](#ativando-encriptação-padrão-em-um-bucket-no-s3) <br>
 [Liberando CORS no S3](#liberando-cors-no-s3) <br>
 [Ativando e desativando o S3 MFA Delete](#ativando-e-desativando-o-s3-mfa-delete) <br>
+[Ativando o S3 Access Logs](#ativando-o-s3-access-logs)
 
 
 ## General info
@@ -704,4 +705,15 @@ Feature que só permite que deletemos objetos de um bucket com um código fornec
 Para ativar esta feature, basta rodar os comandos abaixo (tendo o Access Key ID e Secret Access Key configurados com o **aws configure**):
 
 ![image](https://user-images.githubusercontent.com/80921933/209412020-299170e4-293d-461d-8e1c-e08b6aec601b.png)
+
+## Ativando o S3 Access Logs
+
+Em um bucket, vamos para a aba **Properties** e selecionamos a opção **Server Access Logging**
+
+Configuramos o bucket de destino
+
+![image](https://user-images.githubusercontent.com/80921933/209415187-4a1bf98f-c4e0-4672-affe-b547d2535df8.png)
+
+Após ativarmos essa feature, o bucket de destino armazenará todas as ações realizadas dentro do bucket configurado.
+
 

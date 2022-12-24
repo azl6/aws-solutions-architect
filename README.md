@@ -67,6 +67,12 @@ Este README se refere **exclusivamente** a atividades de hands-on. Para informa�
 [Ativando a replicação de objetos no S3](#ativando-a-replicação-de-objetos-no-s3) <br>
 [Inserindo um objeto em algum storage class](#inserindo-um-objeto-em-algum-storage-class) <br>
 [Ativando o Lifecycle management](#ativando-o-lifecycle-management) <br>
+[Ativando encriptação em objetos no S3](#ativando-encriptação-em-objetos-no-s3) <br>
+[Ativando encriptação padrão em um bucket no S3](#ativando-encriptação-padrão-em-um-bucket-no-s3) <br>
+[Liberando CORS no S3](#liberando-cors-no-s3) <br>
+[Ativando e desativando o S3 MFA Delete](#ativando-e-desativando-o-s3-mfa-delete) <br>
+[Ativando o S3 Access Logs](#ativando-o-s3-access-logs)
+[gerando pre signed urls](#gerando-pre-signed-urls)
 
 
 ## General info
@@ -661,3 +667,71 @@ Em **Lifecycle rule actions**, podemos escolher os tipos de regras desejadas
 Depois, basta criar as regras de transição de dados desejada
 
 ![image](https://user-images.githubusercontent.com/80921933/209185541-7a954502-6714-43c8-a8e4-1f84075bcb3e.png)
+
+# Ativando encriptação em objetos no S3
+
+Ao realizar o upload de um objeto, podemos acessar a opção **Server-side encryption**, no final da página, e escolher a opção desejada
+
+![Screenshot from 2022-12-23 19-41-44](https://user-images.githubusercontent.com/80921933/209411222-e01f9e3a-2c66-45f5-bfd7-11a0a956a0dd.png)
+
+# Ativando encriptação padrão em um bucket no S3
+
+Nas configurações de um bucket, na aba **Properties**, acessamos a opção **Edit default encryption**
+
+![image](https://user-images.githubusercontent.com/80921933/209411348-d806ba68-0656-4f7c-82c1-751dcdacb21f.png)
+
+Daí, basta escolher o recurso para encriptação.
+
+Também é possível sobreescrever o mecanismo de encriptação do bucket no momento do upload de um objeto:
+
+![image](https://user-images.githubusercontent.com/80921933/209411552-88ec1e8c-10f3-44b3-8408-43250229c465.png)
+
+
+## Liberando CORS no S3
+
+Na sessão **Permissions** de um bucket, no final da página, temos as configurações de CORS
+
+![image](https://user-images.githubusercontent.com/80921933/209410980-9ad74c64-bb7e-448c-a082-631f31551d2e.png)
+
+Essas configurações são escritas em JSON, como nesse caso:
+
+![image](https://user-images.githubusercontent.com/80921933/209411002-25101ae9-8a49-4698-90d9-ca11538b7273.png)
+
+Basta escrevermos o JSON, permitindo as origins desejadas.
+
+## Ativando e desativando o S3 MFA Delete
+
+Feature que só permite que deletemos objetos de um bucket com um código fornecido pelo MFA
+
+Para ativar esta feature, basta rodar os comandos abaixo (tendo o Access Key ID e Secret Access Key configurados com o **aws configure**):
+
+![image](https://user-images.githubusercontent.com/80921933/209412020-299170e4-293d-461d-8e1c-e08b6aec601b.png)
+
+## Ativando o S3 Access Logs
+
+Em um bucket, vamos para a aba **Properties** e selecionamos a opção **Server Access Logging**
+
+Configuramos o bucket de destino
+
+![image](https://user-images.githubusercontent.com/80921933/209415187-4a1bf98f-c4e0-4672-affe-b547d2535df8.png)
+
+Após ativarmos essa feature, o bucket de destino armazenará todas as ações realizadas dentro do bucket configurado.
+
+## Gerando pre signed urls
+
+As pre-signed URLs são usadas para fornecer accesso temporário a objetos armazenados no S3.
+
+Selecionamos algum objeto de um bucket, e selecionamos o drop-down **Actions**, para selecionar a opção **Share with a pre-signed url**
+
+![Screenshot from 2022-12-23 21-39-36](https://user-images.githubusercontent.com/80921933/209415604-498ac572-1295-4225-b9c8-02fa881edb1a.png)
+
+Depois, basta configuramos o tempo desejado de expiração da URL
+
+![image](https://user-images.githubusercontent.com/80921933/209415625-a4b71810-bb43-4fe3-9aef-365ac49333bd.png)
+
+Agora, basta compartilhar a URL.
+
+![image](https://user-images.githubusercontent.com/80921933/209415639-a886042a-bb8e-4944-b5ba-c8633cea59c0.png)
+
+
+

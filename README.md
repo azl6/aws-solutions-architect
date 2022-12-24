@@ -72,8 +72,11 @@ Este README se refere **exclusivamente** a atividades de hands-on. Para informa�
 [Liberando CORS no S3](#liberando-cors-no-s3) <br>
 [Ativando e desativando o S3 MFA Delete](#ativando-e-desativando-o-s3-mfa-delete) <br>
 [Ativando o S3 Access Logs](#ativando-o-s3-access-logs) <br>
-[Gerando pre signed urls](#gerando-pre-signed-urls)
+[Gerando pre signed urls](#gerando-pre-signed-urls) <br>
 
+**CloudFront**
+
+[Inserindo um bucket do S3 no cache do CloudFront](#inserindo-um-bucket-do-s3-no-cache-do-cloudfront)
 
 ## General info
 
@@ -733,5 +736,28 @@ Agora, basta compartilhar a URL.
 
 ![image](https://user-images.githubusercontent.com/80921933/209415639-a886042a-bb8e-4944-b5ba-c8633cea59c0.png)
 
+## Inserindo um bucket do S3 no cache do CloudFront
+
+**Importante:** Para este exemplo, utilizamos um bucket não-público. Ou seja, na opção **Origin Access**, selecionamos a utilização de um OAC
+
+Com um bucket já criado (inseri uma imagem nele), clicamos em **Create a CloudFront distribution**
+
+![image](https://user-images.githubusercontent.com/80921933/209419344-2ea54c92-6f8c-438e-9c91-ee6c2c73b810.png)
+
+Selecionamos nosso bucket como **Origin**
+
+![image](https://user-images.githubusercontent.com/80921933/209419431-a6ec8da3-189e-47c6-99a6-358fddd02463.png)
+
+Em **Origin Access**, criamos um **Control setting** com os valores padrões
+
+![image](https://user-images.githubusercontent.com/80921933/209419511-882c6496-1b1d-411c-b2c5-f42fb0a003d3.png)
+
+Finalizamos por aqui. Só dar um **Create**
+
+No topo da próxima página, veremos a seguinte mensagem:
+
+![image](https://user-images.githubusercontent.com/80921933/209419572-07441d22-02eb-4473-b8fc-c4c5ba133c61.png)
+
+Basta copiar a policy gerada, inserí-la no bucket, e acessar o DNS fornecido pelo CloudFront. Os dados já estarão com o cache sendo realizado.
 
 

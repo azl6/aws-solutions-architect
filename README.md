@@ -828,7 +828,23 @@ Devemos informar os dados do subscriber, nesse caso, meu email
 
 ![image](https://user-images.githubusercontent.com/80921933/209453823-c8d37e1c-5c80-429e-8bb2-ea43631cbafc.png)
 
-CONTINUAR...................
+Após finalizar a criação do **SNS Topic**, o subscriber ficará com o status **Pending confirmation**
+
+![image](https://user-images.githubusercontent.com/80921933/209456444-719352ae-151a-46aa-9487-6b7639343ea5.png)
+
+Basta confirmarmos o e-mail, e o status irá para **Confirmed**
+
+![image](https://user-images.githubusercontent.com/80921933/209456469-fc103635-f593-44ca-bc7d-1efbd3fc91ff.png)
+
+Agora, ao enviarmos a seguinte mensagem:
+
+![image](https://user-images.githubusercontent.com/80921933/209456489-9fbbf296-8e76-4d2a-a6b6-b7b9ba7ae087.png)
+
+Todos os subscribers receberão um e-mail!
+
+![image](https://user-images.githubusercontent.com/80921933/209456503-f943ac27-bc9b-4eec-8647-349d712b61c2.png)
+
+
 
 
 

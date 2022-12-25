@@ -84,6 +84,10 @@ Este README se refere **exclusivamente** a atividades de hands-on. Para informa�
 [Criando uma fila FIFO no SQS](#criando-uma-fila-fifo-no-sqs) <br>
 [Enviando e recebendo mensagens pelo console](#enviando-e-recebendo-mensagens-pelo-console)
 
+**SNS**
+
+[Criando um SNS Topic para enviar emails para subscribers](#criando-um-sns-topic-para-enviar-emails-para-subscribers) <br>
+
 ## General info
 
 **Important ports**
@@ -803,6 +807,46 @@ Ao clicar na mensagem, poderemos acessar suas informações
 ![image](https://user-images.githubusercontent.com/80921933/209453255-a4384c79-5d53-4205-a12b-9e410fcb35a0.png)
 
 Após a leitura da mensagem, deve-se apagá-la.
+
+## Criando um SNS Topic para enviar emails para subscribers
+
+Na página do serviço, selecionamos um nome para nosso **SNS Topic** e clicamos em **Next step**
+
+![image](https://user-images.githubusercontent.com/80921933/209453772-a331d3a8-a5ae-4402-a650-e4143dde2a3a.png)
+
+Na página de configuração, definimos nossas escolhas. Nesse tutorial, utilizarei um **SNS Topic** do tipo **Standard**
+
+Depois de criar o **SNS Topic**, acessamos a suas configurações e clicamos em **Create subscription**
+
+![image](https://user-images.githubusercontent.com/80921933/209453796-e7cd586f-bc23-43c2-bdcc-abe21a8f6847.png)
+
+Aqui, podemos selecionar uma série de integrações com o SNS. Escolherei Email.
+
+![image](https://user-images.githubusercontent.com/80921933/209453804-2f6e6ca5-c8bb-4a02-8254-277cd0dd7221.png)
+
+Devemos informar os dados do subscriber, nesse caso, meu email
+
+![image](https://user-images.githubusercontent.com/80921933/209453823-c8d37e1c-5c80-429e-8bb2-ea43631cbafc.png)
+
+Após finalizar a criação do **SNS Topic**, o subscriber ficará com o status **Pending confirmation**
+
+![image](https://user-images.githubusercontent.com/80921933/209456444-719352ae-151a-46aa-9487-6b7639343ea5.png)
+
+Basta confirmarmos o e-mail, e o status irá para **Confirmed**
+
+![image](https://user-images.githubusercontent.com/80921933/209456469-fc103635-f593-44ca-bc7d-1efbd3fc91ff.png)
+
+Agora, ao enviarmos a seguinte mensagem:
+
+![image](https://user-images.githubusercontent.com/80921933/209456489-9fbbf296-8e76-4d2a-a6b6-b7b9ba7ae087.png)
+
+Todos os subscribers receberão um e-mail!
+
+![image](https://user-images.githubusercontent.com/80921933/209456503-f943ac27-bc9b-4eec-8647-349d712b61c2.png)
+
+
+
+
 
 
 

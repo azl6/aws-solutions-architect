@@ -88,6 +88,10 @@ Este README se refere **exclusivamente** a atividades de hands-on. Para informa�
 
 [Criando um SNS Topic para enviar emails para subscribers](#criando-um-sns-topic-para-enviar-emails-para-subscribers) <br>
 
+**ECS**
+
+[Criando um cluster ECS com 2 inst창ncias com load balancing](#criando-um-cluster-ec2-com-2-inst창ncias-com-load-balancing) <br>
+
 ## General info
 
 **Important ports**
@@ -844,7 +848,11 @@ Todos os subscribers receber찾o um e-mail!
 
 ![image](https://user-images.githubusercontent.com/80921933/209456503-f943ac27-bc9b-4eec-8647-349d712b61c2.png)
 
+## Criando um cluster ECS com 2 inst창ncias com load balancing
 
+1. Criar duas inst창ncias EC2 vazias
+2. Criar o cluster ECS
+3. 
 
 
 

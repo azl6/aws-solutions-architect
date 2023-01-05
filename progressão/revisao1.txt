@@ -1,0 +1,33 @@
+- Kinesis Data Streams
+
+Records coming have:
+Partition key - identifier that wiill determine in which shard it will be stored
+Data blob - the data itself
+
+Records going have a SEQUENCE NUMBER added, which directs to the shard that the record was stored on
+
+Shards have two capacity modes:
+Provisioned: We determine how many shards we want. 1MB/s IN, 2MB/s OUT
+On-demand: Scales automatically. 4MB/s IN and OUT
+
+----------------------------------------------------------------------------------
+
+- Kinesis Data Firehose
+
+Receives up to 1MB of data and directs it to destinies, such as:
+
+AWS S3
+AWS RedShift
+AWS ElasticSearch
+
+Can also direct data to 3rd party or custom endpoints.
+
+It's NEAR REAL TIME, because it has the 'batch limit' of 1MB. If the 1MB data doesn't fill the batch, we'll have a minimum 1min latency
+
+Can also use a lambda-function before data gets transfered, to transform it as you wish
+
+---------------------------------------------------------------------------------- 
+
+
+
+

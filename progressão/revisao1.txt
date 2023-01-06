@@ -1,3 +1,109 @@
+169.254.169.254/latest/metadata = encontrar metadata
+
+- EC2
+ENI's are bound to AZ!
+
+- EBS
+Fast snapshot restore
+st1
+io1 and io2 multi-attach available with up to 16 instances
+
+- RDS
+
+Storage backed by gp2 and io1
+Maximum storage threshold for storage scaling
+Read replicas are EVENTUALLY CONSISTENT, therefore ASYNC!
+MUlti-AZ replication are SYNC because they need to be prepared for disaster-recovery
+We still pay for stopped db, so backup-and-restore might be a better strategy if our DB is ocioso
+RDS Proxy
+Max number of read-replicas is 5!
+
+- Aurora
+
+Proxy fleet for serverless
+Aurora Cross Region Replication exists and is very fast
+Aurora Machine Leaning to use ML services for recommendations
+On-prem to Aurora: Percona XtraBackup to S3, then S3 to Aurora
+Aurora Database Cloning to create diff environments
+
+- Elasticache
+
+Estrategias: Lazy-loading, write-through e Session Store
+Memcached has no replication, persistance and backup-and-restore
+Elasticache does not support IAM Auth
+Redis Sorted Sets for element uniqueness and ordering
+Redis Auth to force user to enter credentials to access data
+
+- Route 53
+
+CNAME can't be used with hosted-zone as origin! Instead, use ALIAS!
+Alias is A or AAAA
+Can't set TTL of ALIAS!
+Alias can not be used for EC2 DNS directly!
+Calculated healthchecks as the healthcheck of the healthcheckers, with IN, OR, etc... rules
+
+----------------------------------------------------------------------------------
+
+- S3
+
+Multipart upload is a must for files bigger than 5GB
+Glacier Instant Retrival and Flexible retrival have a min. storage duration of 80 DAYS!
+Glacier Deep Archive has a min. storage duration of 180 days!
+Glacier Flexible Retrieval retrival types: Expedited (5min), Standard (5h), Bulk (12h)
+Glacier Deep Archive retrival types: Standard (12h) and Bulk (48h)
+Transition actions: Change objects between different storage classes
+Expiration actions: Delete objects or objects versions, incomplete multipart uploads
+S3 Analytics: Recommendations for S3 Standard and S3 Standard-IA
+S3 Requester Pay: Shifting the object-retrival payment responsability to the AWS account that retrives it
+S3 Events Notifications: Triggers events after API calls are made to S3
+S3 Transfer Acceleration: To speed-up transfers from diff parts of the globe
+S3 Byte-range fetch: Used to get only a specific part of the request and speed-up download
+S3 Select and Glacier Select: SQL queries on S3. Uses S3 Inventory to list objects, then S3 Select to query them.
+S3 Batch Operations: Used to perform batch-actions on S3, such as deleting objects, moving objects, encrypting objects, etc.
+SSE-S3: Server-side encryption with AWS-Managed keys
+SSE-KMS: Server-side encryption with KMS keys
+SSE-C: Server-side encryption with customer-provided key
+MFA Delete: Enforces that drastic S3 changes, such as deleting objects and disabling bucket versioning, should use MFA-given code
+S3 Access Logs: Used to log API calls made to a bucket. Logs should be directed to other bucket, otherwise there'll be a loop
+S3 Pre-signed URLs: Temporary URL to access S3 objects
+S3 Glacier Vault Lock: Rules to enforce WORM on Glacier
+S3 Object Lock: Enforce that objects wont be deleted. Compliance mode: NO ONE CAN DELETE. Governance mode: Some admins can delete.
+S3 Access Points: To give access to some object prefixes to some group of users, such as: /sales, /tech, etc...
+S3 Object Lambda: Used to apply changes to objects before they are fully provided to users
+
+- CloudFront
+
+Origins: Can be S3, EC2, etc..
+Origin Access Control: Allows only CloudFront distributions to access your origins, instead of leaving them open
+Origins that sit inside of a SG need to allow the IP of edge-locations in
+CloudFront Geo Restrictions: Denies access to your workloads from chosen geographical locations
+Price classes: 100: Only N.A and Europe. 200: Doesn't include S.A and Australia. All is All.
+Cache Invalidations: To deliver content to edge-locations instantly, without TTL
+
+- Global Accelerator
+
+ANycast IP is when the same IP can point to multiple servers
+2 Anycast IP's
+Clients requesting the app go through AWS edge locations to fasten the process
+
+- Snow Family
+
+Snowcone comes with DataSync agent installed
+Snowcone for edge computing, up to 8TB
+Snowball for edge computing, up to 80TB
+Snowmobile for data-transfers, up to 100PB
+OpsHub to manage SnowFamily devices
+SNowfamily devices can not transfer data directly to S3 Glacier. Lifecycle rules should be used for that.
+Snowmobile better than Snowball if transfers are over 10PB
+
+- Fsx
+
+Deploy Filesystems on AWS
+Fsx for lustre: HPC (high-performance computing)
+Fsx for NETAPP ONTAP
+Fsx for Windows File Server
+Fsx for ZFS
+
 - Kinesis Data Streams
 
 Records coming have:

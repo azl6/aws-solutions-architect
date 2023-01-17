@@ -868,17 +868,16 @@ Selecionamos a VPC
 
 ![image](https://user-images.githubusercontent.com/80921933/212894655-2c37324c-ef9c-4001-a5b6-a20661e42f13.png)
 
-
 Para cada subnet criada, selecionamos seus respectivos ranges e nomes.
 
 ![image](https://user-images.githubusercontent.com/80921933/212894795-7e84a4c1-6d3f-4672-adec-5a3c295defce.png)
 
 Optei pela VPC ter o CIDR 10.0.0.0/16, e as subnets:
 
-- 10.0.0.0/24
-- 10.0.1.0/24
-- 10.0.2.0/24
-- 10.0.3.0/24
+- 10.0.0.0/24 (public-1 na AZ1)
+- 10.0.1.0/24 (public-2 na AZ2)
+- 10.0.2.0/24 (private-3 na AZ1)
+- 10.0.3.0/24 (private-4 na AZ2)
 
 Isso me dá um range de 255 IP's internos por subnet.
 
@@ -897,7 +896,7 @@ Para tal, nos direcionamos ao menu dos IGW, e verificaremos que o status do IGW 
 
 Basta clicar nele, ir em **Actions**, clicar em **Attach to VPC**, e selecionar a VPC criada
 
-4. Criar um **Route Table**, apontando para a nossa VPC
+3. Criar um **Route Table**, apontando para a nossa VPC
 
 Após isso, no menu do **Route Table** criado, clicamos em **Edit routes**
 
@@ -907,7 +906,7 @@ Adicionamos a rule cujo destination é 0.0.0.0 para o IGW attachado na VPC
 
 ![image](https://user-images.githubusercontent.com/80921933/212917370-a41bc9e6-5e90-45fb-b385-69c7e6903e69.png)
 
-Pronto! Agora, a VPC terá conectividade com a internet. Para testar, basta criar uma EC2 e dar SSH nela.
+Pronto! Agora, a VPC terá conectividade com a internet. Para testar, basta criar uma EC2 em alguma subnet e dar SSH nela.
 
 
 

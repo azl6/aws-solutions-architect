@@ -858,6 +858,28 @@ Nota importantes:
 
 ![image](https://user-images.githubusercontent.com/80921933/212893426-95d0adad-3738-4916-9798-34e8eb93acd0.png)
 
+## Criando subnets para uma VPC
+
+Para esse exemplo, usarei a VPC criada acima.
+
+Basta
+
+Selecionamos a VPC
+
+![image](https://user-images.githubusercontent.com/80921933/212894655-2c37324c-ef9c-4001-a5b6-a20661e42f13.png)
+
+
+Para cada subnet criada, selecionamos seus respectivos ranges e nomes.
+
+![image](https://user-images.githubusercontent.com/80921933/212894795-7e84a4c1-6d3f-4672-adec-5a3c295defce.png)
+
+Optei pela VPC ter o CIDR 10.0.0.0/16, e as subnets:
+
+- 10.0.0.0/24
+- 10.0.1.0/24
+- 10.0.2.0/24
+
+Isso me dá um range de 255 IP's internos por subnet.
 
 
 

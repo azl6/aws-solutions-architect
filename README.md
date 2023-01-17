@@ -78,6 +78,9 @@ Este README se refere **exclusivamente** a atividades de hands-on. Para informa�
 **ECS** <br>
 [Criando um cluster ECS com 2 instâncias com load balancing](#criando-um-cluster-ec2-com-2-instâncias-com-load-balancing) <br>
 
+**VPC** <br>
+... Inserir tópicos com o script aqui!
+
 ## General info
 
 **Important ports**
@@ -839,6 +842,25 @@ Todos os subscribers receberão um e-mail!
 1. Criar duas instâncias EC2 vazias
 2. Criar o cluster ECS
 3. 
+
+## Criando uma VPC
+
+No menu de VPC, clicamos em **Create VPC** (escolhendo a região adequada)
+
+![image](https://user-images.githubusercontent.com/80921933/212893015-3383c26b-fda1-4998-a60e-c7c9ef038a09.png)
+
+Depois, basta preenchermos as informações básicas da VPC (escolhi **VPC Only** para criar as coisas separadamente)
+
+Nota importantes:
+
+- O CIDR mais alto permitido é /28, e o menor é /16
+- Usarei essa VPC para os exemplos de criação de subnets abaixo. Essa VPC terá o CIDR range de 10.0.0.0/16
+
+![image](https://user-images.githubusercontent.com/80921933/212893426-95d0adad-3738-4916-9798-34e8eb93acd0.png)
+
+
+
+
 
 
 

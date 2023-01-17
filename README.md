@@ -903,6 +903,12 @@ Após isso, no menu do **Route Table** criado, clicamos em **Edit routes**
 
 ![image](https://user-images.githubusercontent.com/80921933/212903903-dcf475b4-f970-4ab9-8ee7-2ef3f4d18638.png)
 
+Adicionamos a rule cujo destination é 0.0.0.0 para o IGW attachado na VPC
+
+![image](https://user-images.githubusercontent.com/80921933/212917370-a41bc9e6-5e90-45fb-b385-69c7e6903e69.png)
+
+Pronto! Agora, a VPC terá conectividade com a internet. Para testar, basta criar uma EC2 e dar SSH nela.
+
 
 
 

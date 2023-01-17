@@ -878,8 +878,33 @@ Optei pela VPC ter o CIDR 10.0.0.0/16, e as subnets:
 - 10.0.0.0/24
 - 10.0.1.0/24
 - 10.0.2.0/24
+- 10.0.3.0/24
 
 Isso me dá um range de 255 IP's internos por subnet.
+
+## Criando um Internet Gateway e Route Table para as subnets públicas
+
+Para que as subnets públicas tenham acesso à internet, precisamos criar um **Internet Gateway**, e associar uma rota para ele com os **Route Tables**
+
+Para isso, devemos (configurações fáceis!):
+
+1. Criar um IGW
+2. Attachar o IGW à nossa VPC
+
+Para tal, nos direcionamos ao menu dos IGW, e verificaremos que o status do IGW criado está como **Dettached**
+
+![image](https://user-images.githubusercontent.com/80921933/212904361-71446491-6398-4b08-9343-52935fdb352c.png)
+
+Basta clicar nele, ir em **Actions**, clicar em **Attach to VPC**, e selecionar a VPC criada
+
+4. Criar um **Route Table**, apontando para a nossa VPC
+
+Após isso, no menu do **Route Table** criado, clicamos em **Edit routes**
+
+![image](https://user-images.githubusercontent.com/80921933/212903903-dcf475b4-f970-4ab9-8ee7-2ef3f4d18638.png)
+
+
+
 
 
 

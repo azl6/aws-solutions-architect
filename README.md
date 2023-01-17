@@ -862,7 +862,7 @@ Nota importantes:
 
 Para esse exemplo, usarei a VPC criada acima.
 
-Basta
+No menu de VPC, clicamos em **Create subnet**
 
 Selecionamos a VPC
 

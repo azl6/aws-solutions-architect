@@ -1,87 +1,4 @@
-Este README se refere **exclusivamente** a atividades de hands-on. Para informações teóricas, refira-se aos demais arquivos do repositório.
-
-[General info](#general-info) <br>
-
-**IAM** <br>
-[Criando usuários IAM](#criando-usuários-iam) <br>
-[Aplicação de IAM policies](#aplicação-de-iam-policies) <br>
-[Estrutura de uma IAM policy](#estrutura-de-uma-iam-policy) <br>
-[Utilizando o AWS Policy Generator](#utilizando-o-aws-policy-generator) <br>
-[Password Policy](#password-policy) <br>
-[MFA device types](#mfa-device-types) <br>
-[IAM Roles](#iam-roles) <br>
-[Credentials Report](#credentials-report) <br>
-[Access Advisor](#access-advisor) <br>
-[Permissão na página de billing para IAM users](#permissão-na-página-de-billing-para-iam-users) <br>
-
-**Billing** <br>
-[Criação de budgets](#criação-de-budgets) <br>
-
-**AMI** <br>
-[Criando uma AMI](#criando-uma-ami) <br>
-[Criando uma EC2 com uma AMI personalizada](#criando-uma-ec2-com-uma-ami-personalizada) <br>
-
-**EC2** <br>
-[EC2 naming convention](#ec2-naming-convention) <br>
-[Creating Placement groups](#creating-placement-groups) <br>
-[Elastic network interfaces for EC2](#elastic-network-interfaces-for-ec2) <br>
-
-**EBS** <br>
-[Criando um EBS Volume e realizando um multi attach](#criando-um-ebs-volume-e-realizando-um-multi-attach) <br>
-[Criando um snapshot a partir de um volume](#criando-um-snapshot-a-partir-de-um-volume) <br>
-[Criando um EBS volume a partir de um snapshot](#criando-um-ebs-volume-a-partir-de-um-snapshot) <br>
-[Copiando um snapshot para outra AZ](#copiando-um-snapshot-para-outra-az) <br>
-[Utilização do Recycle bin para previnir deleções acidentais de snapshots](#utilização-do-recycle-bin-para-previnir-deleções-acidentais-de-snapshots) <br>
-[Criando um EBS volume encriptado a partir de um não encriptado](#criando-um-ebs-volume-encriptado-a-partir-de-um-não-encriptado) <br>
-
-**EFS** <br>
-[Criando um EFS file system](#criando-um-efs-file-system) <br>
-[Attachando um EFS file system a uma EC2](#attachando-um-efs-file-system-a-uma-ec2) <br>
-[Lendo arquivos de um EFS File System compartilhado entre duas EC2 em AZs diferentes](#lendo-arquivos-de-um-efs-file-system-compartilhado-entre-duas-ec2-em-azs-diferentes) <br>
-
-**Load-Balancers** <br>
-[Criando um target group para utilizar em um Load Balancer](#criando-um-target-group-para-utilizar-em-um-load-balancer) <br>
-[Criando um Application Load Balancer](#criando-um-application-load-balancer) <br>
-[Criando rules de roteamento em um Application Load Balancer](#criando-rules-de-roteamento-em-um-application-load-balancer) <br>
-[Criando um Network Load Balancer](#criando-um-network-load-balancer) <br>
-[Adicionando cookies e stickness ao Load Balancer](#adicionando-cookies-e-stickness-ao-load-balancer) <br>
-[Criando um Auto Scaling Group](#criando-um-auto-scaling-group) <br>
-[Setando o automatic scaling](#setando-o-automatic-scaling) <br>
-
-**Route 53** <br>
-[Registrando um domínio no Route 53](#registrando-um-domínio-no-route-53) <br>
-
-**S3** <br>
-[Hosteando um website estático no S3](#hosteando-um-website-estático-no-s3) <br>
-[Ativando o S3 versioning](#ativando-o-s3-versioning) <br>
-[Ativando a replicação de objetos no S3](#ativando-a-replicação-de-objetos-no-s3) <br>
-[Inserindo um objeto em algum storage class](#inserindo-um-objeto-em-algum-storage-class) <br>
-[Ativando o Lifecycle management](#ativando-o-lifecycle-management) <br>
-[Ativando encriptação em objetos no S3](#ativando-encriptação-em-objetos-no-s3) <br>
-[Ativando encriptação padrão em um bucket no S3](#ativando-encriptação-padrão-em-um-bucket-no-s3) <br>
-[Liberando CORS no S3](#liberando-cors-no-s3) <br>
-[Ativando e desativando o S3 MFA Delete](#ativando-e-desativando-o-s3-mfa-delete) <br>
-[Ativando o S3 Access Logs](#ativando-o-s3-access-logs) <br>
-[Gerando pre signed urls](#gerando-pre-signed-urls) <br>
-
-**CloudFront** <br>
-[Inserindo um bucket do S3 no cache do CloudFront](#inserindo-um-bucket-do-s3-no-cache-do-cloudfront)
-
-**SQS** <br>
-[Criando uma fila Standard no SQS](#criando-uma-fila-standard-no-sqs) <br>
-[Criando uma fila FIFO no SQS](#criando-uma-fila-fifo-no-sqs) <br>
-[Enviando e recebendo mensagens pelo console](#enviando-e-recebendo-mensagens-pelo-console)
-
-**SNS** <br>
-[Criando um SNS Topic para enviar emails para subscribers](#criando-um-sns-topic-para-enviar-emails-para-subscribers) <br>
-
-**ECS** <br>
-[Criando um cluster ECS com 2 instâncias com load balancing](#criando-um-cluster-ec2-com-2-instâncias-com-load-balancing) <br>
-
-**VPC** <br>
-... Inserir tópicos com o script aqui!
-
-## General info
+# General info
 
 **Important ports**
 
@@ -91,7 +8,7 @@ Este README se refere **exclusivamente** a atividades de hands-on. Para informa�
 
 **IAM Policy Simulator** Can be used to test your IAM policies and check whether they allow or deny an API call. Link to the tool: https://policysim.aws.amazon.com/home/index.jsp?#
 
-## Criando usuários IAM
+# Criando usuários IAM
 
 Podemos criar usuários normalmente, inserí-los em grupos e atribuir policies a tais grupos. Depois de criado, podemos logar com o usuário no console através da url fornecida em **IAM > Dashboard**. 
 
@@ -107,22 +24,22 @@ Seremos redirecionados para a página de login do IAM, bastando informar o resta
 
 ![image](https://user-images.githubusercontent.com/80921933/206605622-1306cf0b-5dca-4a0c-aadc-9bc220ed7e9f.png)
 
-### Aplicação de IAM policies
+# Aplicação de IAM policies
 
 ![image](https://user-images.githubusercontent.com/80921933/206606002-f1a739ca-e0d2-4cfb-862f-a88f0d4fec9d.png)
 
 
-## Estrutura de uma IAM policy
+# Estrutura de uma IAM policy
 
 ![image](https://user-images.githubusercontent.com/80921933/206606247-a3bc864f-bb64-4e18-8e5f-fcf43b628533.png)
 
-## Utilizando o AWS Policy Generator
+# Utilizando o AWS Policy Generator
 
 O seguinte site pode ser usado para gerar policies de maneira intuitiva:
 
 https://awspolicygen.s3.amazonaws.com/policygen.html
 
-## Password Policy
+# Password Policy
 
 Podemos configurar uma **password policy** clicando no seguinte botão:
 
@@ -132,13 +49,13 @@ Lá, podemos customizar a estrutura das senhas dos **IAM users** criados naquela
 
 ![image](https://user-images.githubusercontent.com/80921933/206610296-59ffa04a-4bed-4654-8af4-ac318c5ce5ca.png)
 
-## MFA device types
+# MFA device types
 
 ![image](https://user-images.githubusercontent.com/80921933/206609291-4649ee2a-89ef-4a8a-93bb-06833cfe0efd.png)
 
 ![image](https://user-images.githubusercontent.com/80921933/206609357-a3bd50d7-6557-4a6b-90a7-7ff65da420df.png)
 
-## IAM Roles
+# IAM Roles
 
 Ao tentarmos rodar o comando
 
@@ -172,7 +89,7 @@ Attachando a role na instância EC2 pelo primeiro menu aberto:
 Agora, o comando será bem sucedido.
 
 
-## Credentials Report
+# Credentials Report
 
 Podemos baixar o **Credentials Report** de uma conta, que consiste em um .xlsx informando todas as informações referentes a **segurança** dos usuários naquela conta.
 
@@ -181,7 +98,7 @@ Podemos baixar o **Credentials Report** de uma conta, que consiste em um .xlsx i
 ![image](https://user-images.githubusercontent.com/80921933/206616990-f5a0cd2d-cbc5-44a2-ae47-f6b611e7306c.png)
 
 
-## Access Advisor
+# Access Advisor
 
 Tela que fornece informações sobre os últimos serviços acessados por um usuário. Utilizada para reforçar o **principle of the least priviledge**
 
@@ -195,7 +112,7 @@ Práticas para dominar:
 
 
 
-## Permissão na página de billing para IAM users
+# Permissão na página de billing para IAM users
 
 Ao acessar a página de Billing através de um IAM user (mesmo que ele esteja com a policy **AdministratorAccess**), seremos informados de que ele não tem permissão para tal ação
 
@@ -207,7 +124,7 @@ Basta ativarmos a opção **Activate IAM Access**, no menu **Account** do usuár
 
 Agora, retornamos ao IAM user e teremos acesso normalmente à página de **Billing**.
 
-## Criação de budgets
+# Criação de budgets
 
 Em **Billing > Budgets > Create Budget**, podemos configurar um budget para que sejamos notificados quando um custo X seja atingido.
 
@@ -217,11 +134,11 @@ Basta seguir o template pré-definido, configurar um valor máximo e um e-mail p
 
 # EC2
 
-## EC2 naming convention
+# EC2 naming convention
 
 ![image](https://user-images.githubusercontent.com/80921933/206863662-f370c08c-a08b-45a1-9d56-6f6b403341d1.png)
 
-## Creating Placement groups
+# Creating Placement groups
 
 **Placement groups** define how your lanched EC2 instances are going to be spread.
 
@@ -237,7 +154,7 @@ After that, when launching an instance, we just need to select the created place
 
 ![image](https://user-images.githubusercontent.com/80921933/206882477-5d1943ee-76e5-4ed0-a167-36a1cc3a9852.png)
 
-## Elastic network interfaces for EC2
+# Elastic network interfaces for EC2
 
 We can display an instance's ENI on **EC2 > Instances > \<INSTANCE> > Networking**
 
@@ -257,7 +174,7 @@ We just need to choose an instance and it's done!
 
 # Elastic Block Store (EBS)
 
-## Criando um EBS Volume e realizando um multi attach
+# Criando um EBS Volume e realizando um multi attach
 
 Ao criar uma instância EC2, podemos acessar opções mais avançadas na aba de **Storage**. Lá, definimos se queremos a flag **delete on termination** ON ou OFF para os EBS volumes. Neste exemplo, deixarei **ON**.
 
@@ -295,7 +212,7 @@ Depois do terminate:
 
 O volume root foi deletado, pois tinha a flag **delete on termination** **ON**. O outro volume criado permaneceu vivo, pois não tinha essa flag. Ele pode ser re-attachado a outras instâncias.
 
-## Criando um snapshot a partir de um volume
+# Criando um snapshot a partir de um volume
 
 No menu de um EBS volume, selecionamos **Actions > Create snapshot**
 
@@ -305,19 +222,19 @@ No menu de **Snapshots**, veremos o snapshot criado
 
 ![image](https://user-images.githubusercontent.com/80921933/207141456-554ae6bb-1ca2-4f2a-8741-93e3f8ab319e.png)
 
-## Criando um EBS volume a partir de um snapshot
+# Criando um EBS volume a partir de um snapshot
 
 A partir de um snapshot, podemos re-criar um volume, por exemplo, e lançá-lo em outra AZ, através da opção **Create volume from snapshot**.
 
 ![image](https://user-images.githubusercontent.com/80921933/207141661-2620aef3-3764-4b4e-9740-ad012d80c7e0.png)
 
-## Copiando um snapshot para outra AZ
+# Copiando um snapshot para outra AZ
 
 Também é possível copiar o snapshot para uma AZ diferente com a opção **Copy snapshot** (encontrada no mesmo menu anterior), a fim de fomentar estratégias de disaster-recovery
 
 ![image](https://user-images.githubusercontent.com/80921933/207142070-a6e397e7-ec61-49eb-951d-112a0e9ccac0.png)
 
-## Utilização do Recycle bin para previnir deleções acidentais de snapshots
+# Utilização do Recycle bin para previnir deleções acidentais de snapshots
 
 Dentro do menu de snapshots, podemos clicar na opção **Recycle bin**
 
@@ -339,7 +256,7 @@ Após deletarmos o snapshot, veremos que ele foi para a Recycle bin. Podemos sel
 
 ![image](https://user-images.githubusercontent.com/80921933/207145081-c93f428c-1538-42ea-9814-151805f70a33.png)
 
-## Criando uma AMI
+# Criando uma AMI
 
 Podemos lançar uma instância EC2 e inserir um script via user data para instalar o Docker
 
@@ -357,7 +274,7 @@ Após configurarmos a AMI, podemos ver ela criada no menu de AMI.
 
 ![image](https://user-images.githubusercontent.com/80921933/207163344-c2424cef-db85-4966-a55a-be2c426ae693.png)
 
-## Criando uma EC2 com uma AMI personalizada
+# Criando uma EC2 com uma AMI personalizada
 
 Do menu de AMI, podemos selecionar a AMI e clicar em **Launch instance from AMI** (print acima).
 
@@ -367,11 +284,11 @@ Alternativamente, podemos selecionar a AMI no menu de criação de EC2, em **My 
 
 Depois, basta seguir o procedimento padrão de criação de EC2.
 
-## Criando um EBS volume encriptado a partir de um não encriptado
+# Criando um EBS volume encriptado a partir de um não encriptado
 
 ![image](https://user-images.githubusercontent.com/80921933/207668790-c5963cd4-a0b5-4196-a132-8a7c54e8d132.png)
 
-## Criando um EFS file system
+# Criando um EFS file system
 
 - Criar um EFS File System
 
@@ -391,7 +308,7 @@ Poderemos confirmar a criação do file system no menu principal
 
 ![image](https://user-images.githubusercontent.com/80921933/207682768-67c2cbc6-8ed4-4927-b846-cbd50a0e3f62.png)
 
-## Attachando um EFS file system a uma EC2
+# Attachando um EFS file system a uma EC2
 
 No menu de criação de EC2, podemos selecionar a seguinte opção
 
@@ -407,7 +324,7 @@ No próximo menu, selecionamos o **file system** e o **mount point**, que será 
 
 Depois, basta criar o EC2 normalmente.
 
-## Lendo arquivos de um EFS File System compartilhado entre duas EC2 em AZs diferentes
+# Lendo arquivos de um EFS File System compartilhado entre duas EC2 em AZs diferentes
 
 Escrevendo da instância 1:
 
@@ -419,7 +336,7 @@ Lendo na instância 2:
 
 O EFS é montado por padrão em /mnt/efs/fs1.
 
-## Criando um target group para utilizar em um Load Balancer
+# Criando um target group para utilizar em um Load Balancer
 
 - As 2 EC2 terão o seguinte user data, que sobe um server http na porta 80 expondo o IP da instância.
 
@@ -457,7 +374,7 @@ Já na tela de **Register targets**, selecionamos as instâncias e clicamos em *
 
 Depois, clicamos em **Create target group**, e poderemos vê-lo criado no menu de **target groups**
 
-## Criando um Application Load Balancer
+# Criando um Application Load Balancer
 
 Para criar um **Applcation Load Balancer** para um target group, visitamos o menu de **Load Balancer** e selecionamos a opção **Create Load Balancer**
 
@@ -481,7 +398,7 @@ Saída 2:
 
 ![image](https://user-images.githubusercontent.com/80921933/207770013-f5f5f6fc-5f07-465a-b7af-e5851b209b0a.png)
 
-## Criando rules de roteamento em um Application Load Balancer
+# Criando rules de roteamento em um Application Load Balancer
 
 No menu do ALB selecionado, clicamos em **View/edit rules**
 
@@ -499,12 +416,12 @@ Testando a regra
 
 ![image](https://user-images.githubusercontent.com/80921933/207772225-94329260-15bb-4fe0-bf88-d6d3f7b23d89.png)
 
-## Criando um Network Load Balancer
+# Criando um Network Load Balancer
 
 Seguir aula 76. 
 Passo a passo muito similar a criação do ALB. A única diferença é que o NLB não necessita de um security group.
 
-## Adicionando cookies e stickness ao Load Balancer
+# Adicionando cookies e stickness ao Load Balancer
 
 Essa opção significa que um usuário, em seu primeiro acesso, fica "vinculado" à instância a qual o ALB o direciona pela primeira vez, por um período de tempo estabelecido.
 
@@ -516,7 +433,7 @@ Na tela que se apresenta, basta configurar o stickiness
 
 ![image](https://user-images.githubusercontent.com/80921933/207777249-3e60233b-f43f-4403-9100-a13605b88300.png)
 
-## Criando um Auto Scaling Group
+# Criando um Auto Scaling Group
 
 Primeiro, definimos um **target group**
 
@@ -566,7 +483,7 @@ Com 2 instâncias, veremos dois IPs diferentes a cada vez que acessarmos o DNS d
 
 As alterações no **Activity history** também acontecem em caso de diminuição da variável **desired number of instances**
 
-## Setando o automatic scaling
+# Setando o automatic scaling
 
 Nas configurações de um ASG, podemos configurar a aba de **Automatic scaling** com as seguintes opções:
 
@@ -584,7 +501,7 @@ Nas configurações de um ASG, podemos configurar a aba de **Automatic scaling**
      
      ![image](https://user-images.githubusercontent.com/80921933/208172198-46d251bc-3aa9-4dff-a8de-0ebd71e96f0a.png)
      
-## Registrando um domínio no Route 53
+# Registrando um domínio no Route 53
 
 Clicamos em **Register Domain**
 
@@ -598,7 +515,7 @@ A partir do **DNS record**, definimos para qual IP aquele **DNS record** irá no
 
 ![image](https://user-images.githubusercontent.com/80921933/208770473-bd6bca29-ea86-436b-9452-2682edf67764.png)
 
-## Hosteando um website estático no S3
+# Hosteando um website estático no S3
 
 Acessamos a opção **Properties**, nas configurações de um bucket
 
@@ -614,7 +531,7 @@ Basta clicarmos em **Edit** e configurar as opções. Nomearei de **index.html**
 
 Depois, basta anexar o arquivo ao bucket, e acessar a url pública disponibilizada.
 
-## Ativando o S3 versioning
+# Ativando o S3 versioning
 
 Nas properties de um bucket, selecionamos **Bucket versioning**
 
@@ -630,7 +547,7 @@ Ao deletar versões, o S3 restaurará a última versão disponível.
 
 Ao deletar um objeto inteiro, inserimos um **Delete Marker** no objeto, que é uma flag para não expor aquele objeto.
 
-## Ativando a replicação de objetos no S3
+# Ativando a replicação de objetos no S3
 
 Para que a replicação funcione, **o bucket-versioning deve estar ativo em ambos!**
 
@@ -650,7 +567,7 @@ Após selecionar o bucket de destino e configurar as demais opções, a replica�
 
 Por outro lado, deletes permanentes **não são replicados.**
 
-## Inserindo um objeto em algum storage class
+# Inserindo um objeto em algum storage class
 
 Ao inserir um objeto em um bucket, podemos acessar a aba de **Properties** e definir para qual storage class aquele objeto irá
 
@@ -658,7 +575,7 @@ Ao inserir um objeto em um bucket, podemos acessar a aba de **Properties** e def
 
 No menu do bucket, poderemos ver o storage class escolhido, que também pode ser posteriormente alterado clicando-se no objeto
 
-## Ativando o Lifecycle management
+# Ativando o Lifecycle management
 
 Nas opções de um bucket, clicamos em **Management** e acessamos a aba **Lifecycle rules**
 
@@ -693,7 +610,7 @@ Também é possível sobreescrever o mecanismo de encriptação do bucket no mom
 ![image](https://user-images.githubusercontent.com/80921933/209411552-88ec1e8c-10f3-44b3-8408-43250229c465.png)
 
 
-## Liberando CORS no S3
+# Liberando CORS no S3
 
 Na sessão **Permissions** de um bucket, no final da página, temos as configurações de CORS
 
@@ -705,7 +622,7 @@ Essas configurações são escritas em JSON, como nesse caso:
 
 Basta escrevermos o JSON, permitindo as origins desejadas.
 
-## Ativando e desativando o S3 MFA Delete
+# Ativando e desativando o S3 MFA Delete
 
 Feature que só permite que deletemos objetos de um bucket com um código fornecido pelo MFA
 
@@ -713,7 +630,7 @@ Para ativar esta feature, basta rodar os comandos abaixo (tendo o Access Key ID 
 
 ![image](https://user-images.githubusercontent.com/80921933/209412020-299170e4-293d-461d-8e1c-e08b6aec601b.png)
 
-## Ativando o S3 Access Logs
+# Ativando o S3 Access Logs
 
 Em um bucket, vamos para a aba **Properties** e selecionamos a opção **Server Access Logging**
 
@@ -723,7 +640,7 @@ Configuramos o bucket de destino
 
 Após ativarmos essa feature, o bucket de destino armazenará todas as ações realizadas dentro do bucket configurado.
 
-## Gerando pre signed urls
+# Gerando pre signed urls
 
 As pre-signed URLs são usadas para fornecer accesso temporário a objetos armazenados no S3.
 
@@ -739,7 +656,7 @@ Agora, basta compartilhar a URL.
 
 ![image](https://user-images.githubusercontent.com/80921933/209415639-a886042a-bb8e-4944-b5ba-c8633cea59c0.png)
 
-## Inserindo um bucket do S3 no cache do CloudFront
+# Inserindo um bucket do S3 no cache do CloudFront
 
 **Importante:** Para este exemplo, utilizamos um bucket não-público. Ou seja, na opção **Origin Access**, selecionamos a utilização de um OAC
 
@@ -763,7 +680,7 @@ No topo da próxima página, veremos a seguinte mensagem:
 
 Basta copiar a policy gerada, inserí-la no bucket, e acessar o DNS fornecido pelo CloudFront. Os dados já estarão com o cache sendo realizado.
 
-## Criando uma fila Standard no SQS
+# Criando uma fila Standard no SQS
 
 Na tela inicial do serviço, clicamos em **Create Queue**
 
@@ -773,11 +690,11 @@ Na sessão de configurações, definimos uma série de aspectos, como: encripta�
 
 Após finalizar as configurações, basta clicar em **Create Queue** no final da página.
 
-## Criando uma fila FIFO no SQS
+# Criando uma fila FIFO no SQS
 
 Basta seguir o procedimento padrão da criação de uma fila Standard, porém, o nome deve conter o sufixo **.fifo**. Ex: MinhaFila.fifo
 
-## Enviando e recebendo mensagens pelo console
+# Enviando e recebendo mensagens pelo console
 
 Com a fila criada, clicamos em **Send and receive messages**
 
@@ -801,7 +718,7 @@ Ao clicar na mensagem, poderemos acessar suas informações
 
 Após a leitura da mensagem, deve-se apagá-la.
 
-## Criando um SNS Topic para enviar emails para subscribers
+# Criando um SNS Topic para enviar emails para subscribers
 
 Na página do serviço, selecionamos um nome para nosso **SNS Topic** e clicamos em **Next step**
 
@@ -837,13 +754,13 @@ Todos os subscribers receberão um e-mail!
 
 ![image](https://user-images.githubusercontent.com/80921933/209456503-f943ac27-bc9b-4eec-8647-349d712b61c2.png)
 
-## Criando um cluster ECS com 2 instâncias com load balancing
+# Criando um cluster ECS com 2 instâncias com load balancing
 
 1. Criar duas instâncias EC2 vazias
 2. Criar o cluster ECS
 3. 
 
-## Criando uma VPC
+# Criando uma VPC
 
 No menu de VPC, clicamos em **Create VPC** (escolhendo a região adequada)
 
@@ -858,7 +775,7 @@ Nota importantes:
 
 ![image](https://user-images.githubusercontent.com/80921933/212893426-95d0adad-3738-4916-9798-34e8eb93acd0.png)
 
-## Criando subnets para uma VPC
+# Criando subnets para uma VPC
 
 Para esse exemplo, usarei a VPC criada acima.
 
@@ -881,7 +798,7 @@ Optei pela VPC ter o CIDR 10.0.0.0/16, e as subnets:
 
 Isso me dá um range de 255 IP's internos por subnet.
 
-## Criando um Internet Gateway para a VPC
+# Criando um Internet Gateway para a VPC
 
 Para que as subnets públicas tenham acesso à internet, precisamos criar um **Internet Gateway**
 
@@ -896,7 +813,7 @@ Para tal, nos direcionamos ao menu dos IGW, e verificaremos que o status do IGW 
 
 Basta clicar nele, ir em **Actions**, clicar em **Attach to VPC**, e selecionar a VPC criada
 
-## Criando route tables para subnets públicas
+# Criando route tables para subnets públicas
 
 Primeiro, criamos um **route table**, e atrelamos-o à nossa VPC (configuração fácil!)
 
@@ -916,7 +833,7 @@ Agora, devemos **associar explicitamente as subnets públicas ao route table com
 
 Pronto! Agora, a subnet terá conectividade com a internet. Para testar, basta criar uma EC2 em alguma subnet e dar SSH nela.
 
-## Criando route-tables para subnets privadas
+# Criando route-tables para subnets privadas
 
 Caso sigamos o mesmo princípio da criação de um route table para uma subnet pública, adicionando a regra **0.0.0.0/0 > INTERNET GATEWAY**, nossa subnet ficaria pública, e esse não é o objetivo.
 
@@ -931,15 +848,3 @@ O approach do NAT Gateway é mais simples. Consiste basicamente em:
 2. Alterar a route table da subnet privada para apontar para o NAT Gateway quando o destino for 0.0.0.0/0
 
 Pronto! As instâncias da subnet privada terão acesso à internet.
-
-
-
-
-
-
-
-
-
-
-
-

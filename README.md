@@ -900,17 +900,19 @@ Basta clicar nele, ir em **Actions**, clicar em **Attach to VPC**, e selecionar 
 
 [INSERIR DADOS DA CRIAÇÃO E ASSOCIAÇÃO DO ROUTE TABLE]
 
+Primeiro, criamos um **route table**, e atrelamos-o à nossa VPC (configuração fácil!)
+
 [\INSERIR DADOS DA CRIAÇÃO E ASSOCIAÇÃO DO ROUTE TABLE]
 
-No menu do **Route Table** criado, clicamos em **Edit routes**
+No menu do **route table** criado, clicamos em **Edit routes**
 
 ![image](https://user-images.githubusercontent.com/80921933/212903903-dcf475b4-f970-4ab9-8ee7-2ef3f4d18638.png)
 
-Adicionamos a rule cujo destination é 0.0.0.0 para o IGW attachado na VPC
+Adicionamos a rule cujo destination é 0.0.0.0 para o IGW attachado na VPC (se vc não criou um IGW, olhar passo anterior)
 
 ![image](https://user-images.githubusercontent.com/80921933/212917370-a41bc9e6-5e90-45fb-b385-69c7e6903e69.png)
 
-Pronto! Agora, a VPC terá conectividade com a internet. Para testar, basta criar uma EC2 em alguma subnet e dar SSH nela.
+Pronto! Agora, a subnet terá conectividade com a internet. Para testar, basta criar uma EC2 em alguma subnet e dar SSH nela.
 
 ## Criando route-tables para subnets privadas
 

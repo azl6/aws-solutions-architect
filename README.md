@@ -904,9 +904,15 @@ No menu do **route table** criado, clicamos em **Edit routes**
 
 ![image](https://user-images.githubusercontent.com/80921933/212903903-dcf475b4-f970-4ab9-8ee7-2ef3f4d18638.png)
 
-Adicionamos a rule cujo destination é 0.0.0.0 para o IGW attachado na VPC (se vc não criou um IGW, olhar passo anterior)
+Adicionamos a rule cujo destination é 0.0.0.0/0 para o IGW attachado na VPC (se vc não criou um IGW, olhar passo anterior)
+
+![image](https://user-images.githubusercontent.com/80921933/213249679-8e973a30-b726-4ed5-97ad-44bf388b5194.png)
 
 ![image](https://user-images.githubusercontent.com/80921933/212917370-a41bc9e6-5e90-45fb-b385-69c7e6903e69.png)
+
+Agora, devemos **associar explicitamente as subnets públicas ao route table com a regra criada**. Para tal, se guiar pela imagem abaixo
+
+![aws](https://user-images.githubusercontent.com/80921933/213249344-b473f7d2-5f7a-4b7d-ae05-82d930ad3a94.png)
 
 Pronto! Agora, a subnet terá conectividade com a internet. Para testar, basta criar uma EC2 em alguma subnet e dar SSH nela.
 

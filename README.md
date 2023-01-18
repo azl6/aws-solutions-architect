@@ -885,9 +885,9 @@ Isso me dá um range de 255 IP's internos por subnet.
 
 Para que as subnets públicas tenham acesso à internet, precisamos criar um **Internet Gateway**
 
-Para isso, devemos (configurações fáceis!):
+Para isso, devemos:
 
-1. Criar um IGW
+1. Criar um IGW (configuração fácil!)
 2. Attachar o IGW à nossa VPC
 
 Para tal, nos direcionamos ao menu dos IGW, e verificaremos que o status do IGW criado está como **Dettached**

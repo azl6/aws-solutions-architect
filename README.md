@@ -1,4 +1,8 @@
+Este README se refere **exclusivamente** a atividades de hands-on. Para informações teóricas, refira-se aos demais arquivos do repositório.
+
 [General info](#general-info) <br>
+
+**IAM** <br>
 [Criando usuários IAM](#criando-usuários-iam) <br>
 [Aplicação de IAM policies](#aplicação-de-iam-policies) <br>
 [Estrutura de uma IAM policy](#estrutura-de-uma-iam-policy) <br>
@@ -8,24 +12,34 @@
 [IAM Roles](#iam-roles) <br>
 [Credentials Report](#credentials-report) <br>
 [Access Advisor](#access-advisor) <br>
-[Billing](#billing) <br>
 [Permissão na página de billing para IAM users](#permissão-na-página-de-billing-para-iam-users) <br>
+
+**Billing** <br>
 [Criação de budgets](#criação-de-budgets) <br>
-[EC2](#ec2) <br>
+
+**AMI** <br>
+[Criando uma AMI](#criando-uma-ami) <br>
+[Criando uma EC2 com uma AMI personalizada](#criando-uma-ec2-com-uma-ami-personalizada) <br>
+
+**EC2** <br>
 [EC2 naming convention](#ec2-naming-convention) <br>
 [Creating Placement groups](#creating-placement-groups) <br>
 [Elastic network interfaces for EC2](#elastic-network-interfaces-for-ec2) <br>
+
+**EBS** <br>
 [Criando um EBS Volume e realizando um multi attach](#criando-um-ebs-volume-e-realizando-um-multi-attach) <br>
 [Criando um snapshot a partir de um volume](#criando-um-snapshot-a-partir-de-um-volume) <br>
 [Criando um EBS volume a partir de um snapshot](#criando-um-ebs-volume-a-partir-de-um-snapshot) <br>
 [Copiando um snapshot para outra AZ](#copiando-um-snapshot-para-outra-az) <br>
 [Utilização do Recycle bin para previnir deleções acidentais de snapshots](#utilização-do-recycle-bin-para-previnir-deleções-acidentais-de-snapshots) <br>
-[Criando uma AMI](#criando-uma-ami) <br>
-[Criando uma EC2 com uma AMI personalizada](#criando-uma-ec2-com-uma-ami-personalizada) <br>
 [Criando um EBS volume encriptado a partir de um não encriptado](#criando-um-ebs-volume-encriptado-a-partir-de-um-não-encriptado) <br>
+
+**EFS** <br>
 [Criando um EFS file system](#criando-um-efs-file-system) <br>
 [Attachando um EFS file system a uma EC2](#attachando-um-efs-file-system-a-uma-ec2) <br>
 [Lendo arquivos de um EFS File System compartilhado entre duas EC2 em AZs diferentes](#lendo-arquivos-de-um-efs-file-system-compartilhado-entre-duas-ec2-em-azs-diferentes) <br>
+
+**Load-Balancers** <br>
 [Criando um target group para utilizar em um Load Balancer](#criando-um-target-group-para-utilizar-em-um-load-balancer) <br>
 [Criando um Application Load Balancer](#criando-um-application-load-balancer) <br>
 [Criando rules de roteamento em um Application Load Balancer](#criando-rules-de-roteamento-em-um-application-load-balancer) <br>
@@ -33,7 +47,11 @@
 [Adicionando cookies e stickness ao Load Balancer](#adicionando-cookies-e-stickness-ao-load-balancer) <br>
 [Criando um Auto Scaling Group](#criando-um-auto-scaling-group) <br>
 [Setando o automatic scaling](#setando-o-automatic-scaling) <br>
+
+**Route 53** <br>
 [Registrando um domínio no Route 53](#registrando-um-domínio-no-route-53) <br>
+
+**S3** <br>
 [Hosteando um website estático no S3](#hosteando-um-website-estático-no-s3) <br>
 [Ativando o S3 versioning](#ativando-o-s3-versioning) <br>
 [Ativando a replicação de objetos no S3](#ativando-a-replicação-de-objetos-no-s3) <br>
@@ -45,18 +63,27 @@
 [Ativando e desativando o S3 MFA Delete](#ativando-e-desativando-o-s3-mfa-delete) <br>
 [Ativando o S3 Access Logs](#ativando-o-s3-access-logs) <br>
 [Gerando pre signed urls](#gerando-pre-signed-urls) <br>
-[Inserindo um bucket do S3 no cache do CloudFront](#inserindo-um-bucket-do-s3-no-cache-do-cloudfront) <br>
+
+**CloudFront** <br>
+[Inserindo um bucket do S3 no cache do CloudFront](#inserindo-um-bucket-do-s3-no-cache-do-cloudfront)
+
+**SQS** <br>
 [Criando uma fila Standard no SQS](#criando-uma-fila-standard-no-sqs) <br>
 [Criando uma fila FIFO no SQS](#criando-uma-fila-fifo-no-sqs) <br>
-[Enviando e recebendo mensagens pelo console](#enviando-e-recebendo-mensagens-pelo-console) <br>
+[Enviando e recebendo mensagens pelo console](#enviando-e-recebendo-mensagens-pelo-console)
+
+**SNS** <br>
 [Criando um SNS Topic para enviar emails para subscribers](#criando-um-sns-topic-para-enviar-emails-para-subscribers) <br>
+
+**ECS** <br>
 [Criando um cluster ECS com 2 instâncias com load balancing](#criando-um-cluster-ecs-com-2-instâncias-com-load-balancing) <br>
+
+**VPC e Subnets** <br>
 [Criando uma VPC](#criando-uma-vpc) <br>
 [Criando subnets para uma VPC](#criando-subnets-para-uma-vpc) <br>
 [Criando um Internet Gateway para a VPC](#criando-um-internet-gateway-para-a-vpc) <br>
 [Criando route tables para subnets públicas](#criando-route-tables-para-subnets-públicas) <br>
 [Criando route-tables para subnets privadas](#criando-route-tables-para-subnets-privadas) <br>
-
 
 # General info
 

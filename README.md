@@ -898,11 +898,7 @@ Basta clicar nele, ir em **Actions**, clicar em **Attach to VPC**, e selecionar 
 
 ## Criando route tables para subnets públicas
 
-[INSERIR DADOS DA CRIAÇÃO E ASSOCIAÇÃO DO ROUTE TABLE]
-
 Primeiro, criamos um **route table**, e atrelamos-o à nossa VPC (configuração fácil!)
-
-[\INSERIR DADOS DA CRIAÇÃO E ASSOCIAÇÃO DO ROUTE TABLE]
 
 No menu do **route table** criado, clicamos em **Edit routes**
 

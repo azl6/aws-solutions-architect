@@ -874,16 +874,16 @@ Para cada subnet criada, selecionamos seus respectivos ranges e nomes.
 
 Optei pela VPC ter o CIDR 10.0.0.0/16, e as subnets:
 
-- 10.0.0.0/24 (public-1 na AZ1)
-- 10.0.1.0/24 (public-2 na AZ2)
-- 10.0.2.0/24 (private-3 na AZ1)
-- 10.0.3.0/24 (private-4 na AZ2)
+- 10.0.0.0/24 
+- 10.0.1.0/24 
+- 10.0.2.0/24 
+- 10.0.3.0/24 
 
 Isso me dá um range de 255 IP's internos por subnet.
 
-## Criando um Internet Gateway e Route Table para as subnets públicas
+## Criando um Internet Gateway para a VPC
 
-Para que as subnets públicas tenham acesso à internet, precisamos criar um **Internet Gateway**, e associar uma rota para ele com os **Route Tables**
+Para que as subnets públicas tenham acesso à internet, precisamos criar um **Internet Gateway**
 
 Para isso, devemos (configurações fáceis!):
 
@@ -896,9 +896,13 @@ Para tal, nos direcionamos ao menu dos IGW, e verificaremos que o status do IGW 
 
 Basta clicar nele, ir em **Actions**, clicar em **Attach to VPC**, e selecionar a VPC criada
 
-3. Criar um **Route Table**, apontando para a nossa VPC
+## Criando route tables para subnets públicas
 
-Após isso, no menu do **Route Table** criado, clicamos em **Edit routes**
+[INSERIR DADOS DA CRIAÇÃO E ASSOCIAÇÃO DO ROUTE TABLE]
+
+[\INSERIR DADOS DA CRIAÇÃO E ASSOCIAÇÃO DO ROUTE TABLE]
+
+No menu do **Route Table** criado, clicamos em **Edit routes**
 
 ![image](https://user-images.githubusercontent.com/80921933/212903903-dcf475b4-f970-4ab9-8ee7-2ef3f4d18638.png)
 
@@ -908,6 +912,21 @@ Adicionamos a rule cujo destination é 0.0.0.0 para o IGW attachado na VPC
 
 Pronto! Agora, a VPC terá conectividade com a internet. Para testar, basta criar uma EC2 em alguma subnet e dar SSH nela.
 
+## Criando route-tables para subnets privadas
+
+Caso sigamos o mesmo princípio da criação de um route table para uma subnet pública, adicionando a regra **0.0.0.0/0 > INTERNET GATEWAY**, nossa subnet ficaria pública, e esse não é o objetivo.
+
+Para fornecer acesso à internet para instâncias privadas, geralmente utilizaremos:
+
+- NAT Instance (deprecated)
+- NAT Gateway
+
+O approach do NAT Gateway é mais simples. Consiste basicamente em:
+
+1. Inserir um NAT Gateway em uma subnet pública
+2. Alterar a route table da subnet privada para apontar para o NAT Gateway quando o destino for 0.0.0.0/0
+
+Pronto! As instâncias da subnet privada terão acesso à internet.
 
 
 

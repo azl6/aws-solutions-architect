@@ -1,3 +1,4 @@
 In RDS, RR can be WITHIN-AZ, CROSS-AZ and CROSS-REGION
 We don't pay for RR fees if they are in the same region
 
+AWS Identity Center: Multi-account permissions and application assignment

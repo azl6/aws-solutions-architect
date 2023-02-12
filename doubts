@@ -1,0 +1,10 @@
+1) Which services between the following can transfer directly to S3 Glacier?
+
+- DataSync
+- DMS
+- Snowcone, Snowball and Snowmobile
+- File Gateway (S3, FSx), Volume Gateway and Tape Gateway 
+
+2) How does ALB's IP behave? Does it even exist? 
+
+3) Why using NLB in front of a ALB besides givin it a fixed IP adress? Plz understand this deeper

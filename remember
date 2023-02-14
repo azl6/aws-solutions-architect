@@ -11,4 +11,6 @@ RDS enchanced monitoring
 
 Usage of AD Federation Service (AD FS) to authenticate users in AWS without creating IAM users
 
+NAT GW e NAT instance are in pub. subnets... What about VPC endpoints?
 
+Remember headers for encryption in S3

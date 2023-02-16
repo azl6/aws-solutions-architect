@@ -26,3 +26,5 @@
 11) Remember headers for encryption in S3
 
 12) Where are ALB's deployed? Are they inside of a subnet? Or outside of it?
+
+13) Are VPC Endpoint Interface and Gateway deployed in the private subnet?

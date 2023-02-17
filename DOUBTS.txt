@@ -40,3 +40,5 @@
 18) OK, I know NAT GW and NAT instances are deployed in public subnets. However, where are VPC Endpoints (interface and gateway) deployed?
 
 19) Headers for encryption in S3
+
+20) Please understand Q47 from JB5

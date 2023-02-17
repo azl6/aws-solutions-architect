@@ -42,3 +42,5 @@
 19) Headers for encryption in S3
 
 20) Please understand Q47 from JB5
+
+21) EFS lifecycle is really max 90 days? Do we really need lifecycle to transition objects to IA storage classes?

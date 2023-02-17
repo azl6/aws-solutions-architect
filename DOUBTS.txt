@@ -32,3 +32,11 @@
 14) S3 minimum storage duration before being able to perform lifecycle transitions
 
 15) File transfer protocols in Storage GW, DataSync, FSx, etc...
+
+16) How many consumers can we have per shard on KDS?
+
+17) Routing types available in ALB besides content-based routing
+
+18) OK, I know NAT GW and NAT instances are deployed in public subnets. However, where are VPC Endpoints (interface and gateway) deployed?
+
+19) Headers for encryption in S3

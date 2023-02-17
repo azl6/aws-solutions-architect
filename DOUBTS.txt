@@ -28,3 +28,7 @@
 12) Where are ALB's deployed? Are they inside of a subnet? Or outside of it?
 
 13) Are VPC Endpoint Interface and Gateway deployed in the private subnet?
+
+14) S3 minimum storage duration before being able to perform lifecycle transitions
+
+15) File transfer protocols in Storage GW, DataSync, FSx, etc...

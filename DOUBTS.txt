@@ -195,8 +195,6 @@ Yes! When we upload an object to a bucket with SSE-KMS, KMS will call the Genera
 
 31) Question points from Udemy:
 
-Aurora serverless with on-demand capacity vs Aurora with provisioned capacity
-
 Using CF with Lambda@edge to perform dynamic computations and reduce traffic between CF and S3 origin thereby reducing network cost
 
 If RDS wasn't encrypted at creation, create snapshots and encrypt with copy, load DB into copied version, destroy old version - this was clearly explained on one TD question

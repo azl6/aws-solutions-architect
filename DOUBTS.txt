@@ -99,7 +99,7 @@ However, this DOES NOT apply to S3 Glacier, Glacier Deep Archive and Intelligent
 
 15) File transfer protocols in Storage GW, DataSync, FSx, etc...
 
-Storage Gateway S3 File Gateway: NFS or SMB
+Storage Gateway S3 File Gateway: SMB or NFS
 
 Storage Gateway FSx File Gateway: SMB, NTFS, AD
 
@@ -123,30 +123,96 @@ Multiple. However, each record will only be processed once. How does Enchanced F
 
 17) Routing types available in ALB besides content-based routing
 
+Path-based routing: By path
+
+Host-based routing: By hostname
+
+HTTP header based-routing: By HTTP headers
+
+Query string based-routing: By ?app=X&...
+
 18) OK, I know NAT GW and NAT instances are deployed in public subnets. However, where are VPC Endpoints (interface and gateway) deployed?
+
+VPC Endpoint interface is at the subnet level.
+
+VPC Endpoint Gateway it at the VPC level.
 
 19) Headers for encryption in S3
 
+x-amz-server-side-encryption = "AES256" for SSE-S3
+
+x-amz-server-side-encryption = "aws:kms" for SSE-KMS
+
+x-amz-server-side-encryption-customer-algorithm, x-amz-server-side-encryption-customer-key and x-amz-server-side-encryption-customer-key-MD5 for SSE-C
+
 20) Please understand Q47 from JB5
+
+We can only transfer for S-IA and ONE-ZONE-IA after 30 days. For Glacier, Glacier D.A and Intelligent Tiering, this doesn't apply, and we can transfer to them after 0 days.
 
 21) EFS lifecycle is really max 90 days? Do we really need lifecycle to transition objects to IA storage classes?
 
+Yes! Yes!
+
 22) Is it only Glacier Flexible Retrieval that have Expedited retrieval type? What about Instant Retrieval?
+
+Yes. Glacier Instant Retrieval already provides an instant retrieval time, so it doesn't offer the expedited kind of retrieval. 
 
 23) How does S3 Retention Period work?
 
+The retention periods of S3 reference the S3 Object Lock feature. I already know the rules so I won't mention them here, however, this question can be found at Mareek's S1 Q46.
+
 24) Is it really possible to use a static website in S3 as an origin for CloudFront?
+
+Yes, it is possible.
 
 25) How does G.A work
 
+We create one ENDPOINT GROUP for EACH REGION. Then, attach endpoints (resources) from each REGION to their respective ENDPOINT GROUPS (that were made for that particular region). Then, the user is routed in the following way: EDGE > G.A > ENDPOINT GROUP > ENDPOINT. Minute 16:30 from this video: https://www.youtube.com/watch?v=tar-fkbnxcw 
+
 26) DataSync is not continuous
+
+No, it's not. Its sync happens on a schedule.
 
 27) Days before transitioning from S3 Standard to others using Lifecycle policies 
 
+It's that rule that we need a minimum of 30 days to transition to Standard-IA and ONE-ZONE IA. This rule does not apply to GLACIER, GLACIER D.A and INTELLIGENT TIERING.
+
 28) Storage Gateway transfer protocols
+
+S3 File Gateway: NFS or SMB 
+
+FSx File Gateway: NTFS, SMB and AD
+
+Volume Gateway: iSCSI
+
+Tape Gateway: iSCSI
 
 29) Check for that Udemy answer with a lot of insights
 
 30) When using SSE-KMS in S3, we might run into a throttling use-case when the high-throughput to use KMS keys exceeds the KMS limits of that region
 
 Yes! When we upload an object to a bucket with SSE-KMS, KMS will call the GenerateDataKey API call. When we download an object from the same bucket, the Decrypt KMS API call will be called. We have quotas per second for these API calls, and if they get exceeded, we might run into a throttling situation.
+
+31) Question points from Udemy:
+
+Aurora serverless with on-demand capacity vs Aurora with provisioned capacity
+
+Using CF with Lambda@edge to perform dynamic computations and reduce traffic between CF and S3 origin thereby reducing network cost
+
+If RDS wasn't encrypted at creation, create snapshots and encrypt with copy, load DB into copied version, destroy old version - this was clearly explained on one TD question
+
+ASG lifecycle hook: termination wait concept - to save EC2 data during a scale-in - this was clear on a TD exam question and also on Stephane's course
+
+SNS + SQS fan-out - multiple consuming services, default SQS retention is 4 days (can be increased to 14)
+
+Reserved instances types 
+
+EC2 instance types
+
+EC2 detailed monitoring
+
+EFS is Posix based. If on-prem has all windows file servers, then use FSx for windows while migrating
+
+user sessions can be saved on elasticache and dynamoDB
+
+minimum retention period in every S3 storage tier

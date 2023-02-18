@@ -1,19 +1,56 @@
 1) Which services between the following can transfer directly to S3 Glacier?
 
-- DataSync - YES!
-- DMS - 
+- DataSync
+
+Yes, DataSync can transfer directly to Glacier. Also, when we have a situation where we want to use DataSync but don't have the network capacity to do so, we should opt for using Snowcone, which comes with DataSync agent installed.
+
+- DMS
+
+??????????????????
+ 
 - Snowcone
-- Snowball - NO!
+
+Snowcone comes with the DataSync agent installed, so technically it CAN transfer directly to Glacier
+
+- Snowball
+
+Snowball CAN NOT transfer directly to Glacier directly. We should use a combination of lifecycle policies to do so.
+
 - Snowmobile
-- File Gateway (S3, FSx), Volume Gateway and Tape Gateway 
+
+Yes! Snowmobile CAN transfer directly to Glacier.
+
+- File Gateway (S3, FSx)
+
+S3 File Gateway CAN NOT transfer NOR connect directly to Glacier. Use lifecycle policies to do so.
+
+FSx connect to FSx file systems, so it's not even a connection to S3. So no.
+
+- Volume Gateway
+
+???????????????????
+
+- Tape Gateway 
+
+Tape Gateway CAN transfer directly to Glacier!
 
 2) How does ALB's IP behave? Does it even exist? 
 
+ALB doesn't have a static public IP address. If we need it to have (to deploy WAF on it, for example), we should use either a Global Accelerator, or front it with a Network Load Balancer
+
 3) Why using NLB in front of a ALB besides givin it a fixed IP adress? Plz understand this deeper
+
+That's the main reason. NLB can also route HTTP and HTTPS since they're TCP based.
 
 4) In RDS, RR can be WITHIN-AZ, CROSS-AZ and CROSS-REGION. We don't pay for RR fees if they are in the same region
 
+Yes!
+
 5) AWS Identity Center: Multi-account permissions and application assignment
+
+Multi-account permissions define which accounts a given person can access
+
+Application assignments define which apps a given person can access
 
 6) Network Firewall: Activate FLOW INSPECTION to detect intrusion-prone traffic
 
@@ -21,21 +58,68 @@
 
 8) RDS enchanced monitoring
 
+It brings more detailed data on RDS Processes, RDS Child Processes and OS Processes
+
 9) Usage of AD Federation Service (AD FS) to authenticate users in AWS without creating IAM users. Available with SAML 2.0 based federation.
 
 10) NAT GW e NAT instance are in pub. subnets... What about VPC endpoints?
 
+VPC Interface Endpoints have an ENI, which requires a Security Group. Hence, it is installed at THE SUBNET LEVEL!
+
+VPC Gateway Endpoints are at the VPC LEVEL! So, it's even different from a NAT Gateway and NAT Instance, which are at the public-subnet level.
+
 11) Remember headers for encryption in S3
+
+For SSE-S3: x-amz-server-side-encryption: "AES256"
+
+For SS3-KMS: x-amz-server-side-encryption: "aws:kms"
+
+For SSE-C: x-amz-server-side-encryption-customer-{algorithm, key, key-MD5} are required.
 
 12) Where are ALB's deployed? Are they inside of a subnet? Or outside of it?
 
+ALB's and every other LB is deployed inside of a subnet! Remember, it also have security groups!
+
 13) Are VPC Endpoint Interface and Gateway deployed in the private subnet?
+
+VPC Endpoint Interface has an ENI, which requires a SG. Hence, it is deployed at the SUBNET LEVEL!
+
+VPC Endpoint Gateway is deployed AT THE VPC LEVEL!
 
 14) S3 minimum storage duration before being able to perform lifecycle transitions
 
+If we want to transfer files to Standard-IA or One-Zone-IA, there's a minimum storage duration for which the object needs to stay in S3 Standard before being able to transition to these classes, which is of 30 days.
+
+Which means that:
+
+- We can't create a lifecycle policy to transition to S3 Standard IA after 2 days, ONLY AFTER 30 DAYS!
+- We can't create a lifecycle policy to transition to S3 ONE-ZONE IA after 2 days, ONLY AFTER 30 DAYS!
+
+However, this DOES NOT apply to S3 Glacier, Glacier Deep Archive and Intelligent Tiering.
+
 15) File transfer protocols in Storage GW, DataSync, FSx, etc...
 
+Storage Gateway S3 File Gateway: NFS or SMB
+
+Storage Gateway FSx File Gateway: SMB, NTFS, AD
+
+Storage Gateway Volume Gateway: iSCSI protocol
+
+Storage Gateway Tape Gateway: VTL and iSCSI
+
+FSx for Windows File Server: SMB and NTFS, DFS (Microsoft Distributed File System)
+
+FSx for Lustre was not explicitly shown.
+
+FSx for NetApp ONTAP: NFS, SMB, iSCSI
+
+FSx for OpenZFS: NFS
+
+DataSync: SMB and NFS
+
 16) How many consumers can we have per shard on KDS?
+
+Multiple. However, each record will only be processed once. How does Enchanced Fanout behave then?
 
 17) Routing types available in ALB besides content-based routing
 
@@ -57,4 +141,12 @@
 
 26) DataSync is not continuous
 
-27) 
+27) Days before transitioning from S3 Standard to others using Lifecycle policies 
+
+28) Storage Gateway transfer protocols
+
+29) Check for that Udemy answer with a lot of insights
+
+30) When using SSE-KMS in S3, we might run into a throttling use-case when the high-throughput to use KMS keys exceeds the KMS limits of that region
+
+Yes! When we upload an object to a bucket with SSE-KMS, KMS will call the GenerateDataKey API call. When we download an object from the same bucket, the Decrypt KMS API call will be called. We have quotas per second for these API calls, and if they get exceeded, we might run into a throttling situation.

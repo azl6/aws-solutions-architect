@@ -107,7 +107,7 @@ Storage Gateway Volume Gateway: iSCSI protocol
 
 Storage Gateway Tape Gateway: VTL and iSCSI
 
-FSx for Windows File Server: SMB and NTFS, DFS (Microsoft Distributed File System)
+FSx for Windows File Server: NTFS, SMB and DFS (Microsoft Distributed File System)
 
 FSx for Lustre was not explicitly shown.
 

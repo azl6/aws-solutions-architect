@@ -214,3 +214,9 @@ EFS is Posix based. If on-prem has all windows file servers, then use FSx for wi
 user sessions can be saved on elasticache and dynamoDB
 
 minimum retention period in every S3 storage tier
+
+32) How does CloudWatch recover instance work?
+
+33) How exactly does the Aurora "promote" works?
+
+34) How to point ROute 53 to a static website on S3

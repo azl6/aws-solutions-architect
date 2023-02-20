@@ -220,3 +220,7 @@ minimum retention period in every S3 storage tier
 33) How exactly does the Aurora "promote" works?
 
 34) How to point ROute 53 to a static website on S3
+
+35) CORS is generally related to web-browsers
+
+36) Step-scaling instance warm-up

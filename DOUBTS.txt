@@ -217,12 +217,45 @@ minimum retention period in every S3 storage tier
 
 32) How does CloudWatch recover instance work?
 
+We can recover instances to its identical state when a hardware failure happens. The instance needs to have an EBS volume attached though. Instance store is NOT allowed for this feature.
+
 33) How exactly does the Aurora "promote" works?
+
+Aurora read-deplicas provide a single DNS name (reader endpoint) and when applications connect to it, it performs load-balancing between the autoscaled read-replicas.
+
+Cross-region replication takes less than 1sec with Global Aurora
+
+When something bad happens and makes the primary Writer instance unavailable, IF the Aurora cluster has other Replicas, it will use the tier of them to promote a new Writer instance. However, if the DB cluster doesn't contain any Aurora Replicas, then the primary instance is recreated in the same AZ during a failure event. 
 
 34) How to point ROute 53 to a static website on S3
 
+General explanation: If our DNS name is www.alex.com, we need to point to a bucket with the EXACT SAME NAME.
+
+If we create alex.com, and point to the bucket alex.com (with static website files), it will work fine.
+
+However, if we create the www.alex.com record, we CAN'T point it to the alex.com bucket, because the name differs. In this case, we need to create a redirection rule in the www.alex.com bucket (yes, we need to create 2 buckets) to alex.com  
+
 35) CORS is generally related to web-browsers
+
+Yes!
 
 36) Step-scaling instance warm-up
 
+When we define instance warm-up on step-scaling policy, metrics won't count to CW until the warm-up time has expired.
+
+This feature can be used when we come across situations such as "...and the application consistently takes 1 minute to initiate upon boot
+up before responding to user requests. How should a solutions architect redesign the architecture to better respond to changing traffic?"
+
+In the above case, instance warm-up is a good feature because it provides us with more accurate CW metrics, since the instance will need to wait 1min to boot-up, and while it's booting up, its metrics won't count to cloudwatch.
+
 37) Do we need to respect the minimum storage duration of each storage class in S3 to make the lifecycle transitions?
+
+Yes! It needs to be respected!
+
+That means, If we want to transition: S3 Standard ----> S3 Standard IA ----> S3 Glacier Instant Retrieval ---> Glacier D.A
+
+We need the following rules:
+
+S3 Standard ---------------------> S3 Standard IA: 30 days (because we need at least 30 days to transfer to IA classes after Standard class)
+S3 Standard IA ------------------> S3 Glacier Instant Retrieval: 60 days (because min. storage duration of S3 Standard IA is 30 days)
+S3 Glacier Instant Retrieval ----> Glacier D.A: 150 days (because min. storage duration of Glacier I.R is 90 days)

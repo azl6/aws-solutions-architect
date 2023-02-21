@@ -259,3 +259,9 @@ We need the following rules:
 S3 Standard ---------------------> S3 Standard IA: 30 days (because we need at least 30 days to transfer to IA classes after Standard class)
 S3 Standard IA ------------------> S3 Glacier Instant Retrieval: 60 days (because min. storage duration of S3 Standard IA is 30 days)
 S3 Glacier Instant Retrieval ----> Glacier D.A: 150 days (because min. storage duration of Glacier I.R is 90 days)
+
+38) RDS Maximum Storage Threshold scaling is based on...
+
+- Free storage is less than 10% of the allocated
+- Low storage lasts for 5 min
+- 6 hours have passed since last modification

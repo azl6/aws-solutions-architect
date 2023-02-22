@@ -267,3 +267,5 @@ S3 Glacier Instant Retrieval ----> Glacier D.A: 150 days (because min. storage d
 - 6 hours have passed since last modification
 
 39) Is step-scaling based on METRICS or ALARMS?
+
+40) Difference in pricing between S3, EFS and EBS

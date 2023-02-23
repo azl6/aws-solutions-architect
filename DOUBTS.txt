@@ -269,3 +269,11 @@ S3 Glacier Instant Retrieval ----> Glacier D.A: 150 days (because min. storage d
 39) Is step-scaling based on METRICS or ALARMS?
 
 40) Difference in pricing between S3, EFS and EBS
+
+41) Difference between API call to get objects IN a bucket and get BUCKETS!
+
+42) Does elasticache support SQL?
+
+43) S3 Pre-signed URL utilities
+
+44) S3 Access Logs vs CloudTrail logs

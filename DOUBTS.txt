@@ -268,12 +268,32 @@ S3 Glacier Instant Retrieval ----> Glacier D.A: 150 days (because min. storage d
 
 39) Is step-scaling based on METRICS or ALARMS?
 
+donno...
+
 40) Difference in pricing between S3, EFS and EBS
+
+most expensive to least expensive
+
+EFS -> EBS -> S3
 
 41) Difference between API call to get objects IN a bucket and get BUCKETS!
 
+ListBucket allows us to list objects in the bucket
+
+GetObject allows us to get the contents of an object
+
 42) Does elasticache support SQL?
+
+ElastiCache itself does not support SQL. It supports caching SQL queries results.
 
 43) S3 Pre-signed URL utilities
 
+Can provide access to objects even without public access enabled. Can also allow users to upload objects to specific locations.
+
 44) S3 Access Logs vs CloudTrail logs
+
+S3 access logs are more detailed and we just pay for the storage used, as when with cloudtrail we still pay for data events.
+
+45) How is the default SG
+
+The default SG allows inbound traffic coming from instances with the same SG
